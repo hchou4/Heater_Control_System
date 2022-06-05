@@ -1,0 +1,1072 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"8088 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4620.h
+[v _TRMT `Vb ~T0 @X0 0 e@32097 ]
+"3771
+[v _TXREG `Vuc ~T0 @X0 0 e@4013 ]
+"581 C:\Program Files (x86)\Microchip\xc8\v1.34\include\plib\usart.h
+[v _OpenUSART `(v ~T0 @X0 0 ef2`uc`ui ]
+"6061 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4620.h
+[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
+"17 utils.h
+[v _Init_ADC `(v ~T0 @X0 0 ef ]
+"4715 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4620.h
+[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
+"1633
+[v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
+"1854
+[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"2075
+[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
+"2296
+[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
+"2517
+[v _TRISE `Vuc ~T0 @X0 0 e@3990 ]
+"675
+[v _PORTE `Vuc ~T0 @X0 0 e@3972 ]
+"7716
+[v _RBPU `Vb ~T0 @X0 0 e@32655 ]
+"3929
+[v _TMR3L `Vuc ~T0 @X0 0 e@4018 ]
+"3810
+[v _T3CON `Vuc ~T0 @X0 0 e@4017 ]
+"1 I2C.h
+[v _I2C_Init `(v ~T0 @X0 0 ef1`Cul ]
+"1 I2C_Support.h
+[v _DS1621_Init `(v ~T0 @X0 0 ef ]
+"7 Interrupt.h
+[v _Init_Interrupt `(v ~T0 @X0 0 ef ]
+"4 Fan_Support.h
+[v _Turn_Off_Fan `(v ~T0 @X0 0 ef ]
+[p mainexit ]
+"123 Main.c
+[v _Initialize_Screen `(i ~T0 @X0 0 ef ]
+"9 I2C_Support.h
+[v _DS3231_Turn_Off_Alarm `(v ~T0 @X0 0 ef ]
+"4
+[v _DS3231_Read_Alarm_Time `(v ~T0 @X0 0 ef ]
+"2
+[v _DS3231_Read_Time `(v ~T0 @X0 0 ef ]
+"2 Fan_Support.h
+[v _get_RPM `(i ~T0 @X0 0 ef ]
+"15 utils.h
+[v _read_volt `(f ~T0 @X0 0 ef ]
+"7 I2C_Support.h
+[v _DS1621_Read_Temp `(i ~T0 @X0 0 ef ]
+"207 C:\Program Files (x86)\Microchip\xc8\v1.34\include\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"193 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4620.h
+[s S17 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S17 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"203
+[s S18 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S18 . INT0 INT1 INT2 CCP2 KBI0 KBI1 KBI2 KBI3 ]
+"213
+[s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S19 . AN12 AN10 AN8 AN9 AN11 PGM PGC PGD ]
+"223
+[s S20 :3 `uc 1 :1 `uc 1 ]
+[n S20 . . CCP2_PA2 ]
+"192
+[u S16 `S17 1 `S18 1 `S19 1 `S20 1 ]
+[n S16 . . . . . ]
+"228
+[v _PORTBbits `VS16 ~T0 @X0 0 e@3969 ]
+"1 Fan_Support.h
+[v _Monitor_Fan `(v ~T0 @X0 0 ef ]
+"23 Main.c
+[v _test_alarm `(v ~T0 @X0 0 ef ]
+"146
+[v _Update_Screen `(i ~T0 @X0 0 ef ]
+"1 utils.h
+[v _check_for_button_input `(uc ~T0 @X0 0 ef ]
+"5
+[v _Do_Beep_Good `(v ~T0 @X0 0 ef ]
+"156 Main.c
+[v _Do_Setup_Time `(i ~T0 @X0 0 ef ]
+"161
+[v _Do_Setup_Alarm_Time `(i ~T0 @X0 0 ef ]
+"166
+[v _Setup_Temp_Fan `(i ~T0 @X0 0 ef ]
+"171
+[v _Toggle_Fan_Monitor `(i ~T0 @X0 0 ef ]
+"6 utils.h
+[v _Do_Beep_Bad `(v ~T0 @X0 0 ef ]
+"8 I2C_Support.h
+[v _DS3231_Turn_On_Alarm `(v ~T0 @X0 0 ef ]
+"14 utils.h
+[v _Set_RGB_Color `(v ~T0 @X0 0 ef1`uc ]
+"11
+[v _Deactivate_Buzzer `(v ~T0 @X0 0 ef ]
+"8
+[v _Activate_Buzzer_4KHz `(v ~T0 @X0 0 ef ]
+"51 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4620.h
+[; <" PORTA equ 0F80h ;# ">
+"189
+[; <" PORTB equ 0F81h ;# ">
+"359
+[; <" PORTC equ 0F82h ;# ">
+"536
+[; <" PORTD equ 0F83h ;# ">
+"677
+[; <" PORTE equ 0F84h ;# ">
+"1005
+[; <" LATA equ 0F89h ;# ">
+"1137
+[; <" LATB equ 0F8Ah ;# ">
+"1269
+[; <" LATC equ 0F8Bh ;# ">
+"1401
+[; <" LATD equ 0F8Ch ;# ">
+"1533
+[; <" LATE equ 0F8Dh ;# ">
+"1635
+[; <" TRISA equ 0F92h ;# ">
+"1640
+[; <" DDRA equ 0F92h ;# ">
+"1856
+[; <" TRISB equ 0F93h ;# ">
+"1861
+[; <" DDRB equ 0F93h ;# ">
+"2077
+[; <" TRISC equ 0F94h ;# ">
+"2082
+[; <" DDRC equ 0F94h ;# ">
+"2298
+[; <" TRISD equ 0F95h ;# ">
+"2303
+[; <" DDRD equ 0F95h ;# ">
+"2519
+[; <" TRISE equ 0F96h ;# ">
+"2524
+[; <" DDRE equ 0F96h ;# ">
+"2682
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"2746
+[; <" PIE1 equ 0F9Dh ;# ">
+"2825
+[; <" PIR1 equ 0F9Eh ;# ">
+"2904
+[; <" IPR1 equ 0F9Fh ;# ">
+"2983
+[; <" PIE2 equ 0FA0h ;# ">
+"3048
+[; <" PIR2 equ 0FA1h ;# ">
+"3113
+[; <" IPR2 equ 0FA2h ;# ">
+"3178
+[; <" EECON1 equ 0FA6h ;# ">
+"3243
+[; <" EECON2 equ 0FA7h ;# ">
+"3249
+[; <" EEDATA equ 0FA8h ;# ">
+"3255
+[; <" EEADR equ 0FA9h ;# ">
+"3261
+[; <" EEADRH equ 0FAAh ;# ">
+"3267
+[; <" RCSTA equ 0FABh ;# ">
+"3272
+[; <" RCSTA1 equ 0FABh ;# ">
+"3476
+[; <" TXSTA equ 0FACh ;# ">
+"3481
+[; <" TXSTA1 equ 0FACh ;# ">
+"3773
+[; <" TXREG equ 0FADh ;# ">
+"3778
+[; <" TXREG1 equ 0FADh ;# ">
+"3784
+[; <" RCREG equ 0FAEh ;# ">
+"3789
+[; <" RCREG1 equ 0FAEh ;# ">
+"3795
+[; <" SPBRG equ 0FAFh ;# ">
+"3800
+[; <" SPBRG1 equ 0FAFh ;# ">
+"3806
+[; <" SPBRGH equ 0FB0h ;# ">
+"3812
+[; <" T3CON equ 0FB1h ;# ">
+"3925
+[; <" TMR3 equ 0FB2h ;# ">
+"3931
+[; <" TMR3L equ 0FB2h ;# ">
+"3937
+[; <" TMR3H equ 0FB3h ;# ">
+"3943
+[; <" CMCON equ 0FB4h ;# ">
+"4038
+[; <" CVRCON equ 0FB5h ;# ">
+"4116
+[; <" ECCP1AS equ 0FB6h ;# ">
+"4197
+[; <" PWM1CON equ 0FB7h ;# ">
+"4266
+[; <" BAUDCON equ 0FB8h ;# ">
+"4271
+[; <" BAUDCTL equ 0FB8h ;# ">
+"4437
+[; <" CCP2CON equ 0FBAh ;# ">
+"4515
+[; <" CCPR2 equ 0FBBh ;# ">
+"4521
+[; <" CCPR2L equ 0FBBh ;# ">
+"4527
+[; <" CCPR2H equ 0FBCh ;# ">
+"4533
+[; <" CCP1CON equ 0FBDh ;# ">
+"4629
+[; <" CCPR1 equ 0FBEh ;# ">
+"4635
+[; <" CCPR1L equ 0FBEh ;# ">
+"4641
+[; <" CCPR1H equ 0FBFh ;# ">
+"4647
+[; <" ADCON2 equ 0FC0h ;# ">
+"4717
+[; <" ADCON1 equ 0FC1h ;# ">
+"4807
+[; <" ADCON0 equ 0FC2h ;# ">
+"4929
+[; <" ADRES equ 0FC3h ;# ">
+"4935
+[; <" ADRESL equ 0FC3h ;# ">
+"4941
+[; <" ADRESH equ 0FC4h ;# ">
+"4947
+[; <" SSPCON2 equ 0FC5h ;# ">
+"5008
+[; <" SSPCON1 equ 0FC6h ;# ">
+"5077
+[; <" SSPSTAT equ 0FC7h ;# ">
+"5316
+[; <" SSPADD equ 0FC8h ;# ">
+"5322
+[; <" SSPBUF equ 0FC9h ;# ">
+"5328
+[; <" T2CON equ 0FCAh ;# ">
+"5398
+[; <" PR2 equ 0FCBh ;# ">
+"5403
+[; <" MEMCON equ 0FCBh ;# ">
+"5507
+[; <" TMR2 equ 0FCCh ;# ">
+"5513
+[; <" T1CON equ 0FCDh ;# ">
+"5617
+[; <" TMR1 equ 0FCEh ;# ">
+"5623
+[; <" TMR1L equ 0FCEh ;# ">
+"5629
+[; <" TMR1H equ 0FCFh ;# ">
+"5635
+[; <" RCON equ 0FD0h ;# ">
+"5767
+[; <" WDTCON equ 0FD1h ;# ">
+"5794
+[; <" HLVDCON equ 0FD2h ;# ">
+"5799
+[; <" LVDCON equ 0FD2h ;# ">
+"6063
+[; <" OSCCON equ 0FD3h ;# ">
+"6139
+[; <" T0CON equ 0FD5h ;# ">
+"6215
+[; <" TMR0 equ 0FD6h ;# ">
+"6221
+[; <" TMR0L equ 0FD6h ;# ">
+"6227
+[; <" TMR0H equ 0FD7h ;# ">
+"6233
+[; <" STATUS equ 0FD8h ;# ">
+"6311
+[; <" FSR2 equ 0FD9h ;# ">
+"6317
+[; <" FSR2L equ 0FD9h ;# ">
+"6323
+[; <" FSR2H equ 0FDAh ;# ">
+"6329
+[; <" PLUSW2 equ 0FDBh ;# ">
+"6335
+[; <" PREINC2 equ 0FDCh ;# ">
+"6341
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"6347
+[; <" POSTINC2 equ 0FDEh ;# ">
+"6353
+[; <" INDF2 equ 0FDFh ;# ">
+"6359
+[; <" BSR equ 0FE0h ;# ">
+"6365
+[; <" FSR1 equ 0FE1h ;# ">
+"6371
+[; <" FSR1L equ 0FE1h ;# ">
+"6377
+[; <" FSR1H equ 0FE2h ;# ">
+"6383
+[; <" PLUSW1 equ 0FE3h ;# ">
+"6389
+[; <" PREINC1 equ 0FE4h ;# ">
+"6395
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"6401
+[; <" POSTINC1 equ 0FE6h ;# ">
+"6407
+[; <" INDF1 equ 0FE7h ;# ">
+"6413
+[; <" WREG equ 0FE8h ;# ">
+"6424
+[; <" FSR0 equ 0FE9h ;# ">
+"6430
+[; <" FSR0L equ 0FE9h ;# ">
+"6436
+[; <" FSR0H equ 0FEAh ;# ">
+"6442
+[; <" PLUSW0 equ 0FEBh ;# ">
+"6448
+[; <" PREINC0 equ 0FECh ;# ">
+"6454
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"6460
+[; <" POSTINC0 equ 0FEEh ;# ">
+"6466
+[; <" INDF0 equ 0FEFh ;# ">
+"6472
+[; <" INTCON3 equ 0FF0h ;# ">
+"6563
+[; <" INTCON2 equ 0FF1h ;# ">
+"6632
+[; <" INTCON equ 0FF2h ;# ">
+"6768
+[; <" PROD equ 0FF3h ;# ">
+"6774
+[; <" PRODL equ 0FF3h ;# ">
+"6780
+[; <" PRODH equ 0FF4h ;# ">
+"6786
+[; <" TABLAT equ 0FF5h ;# ">
+"6794
+[; <" TBLPTR equ 0FF6h ;# ">
+"6800
+[; <" TBLPTRL equ 0FF6h ;# ">
+"6806
+[; <" TBLPTRH equ 0FF7h ;# ">
+"6812
+[; <" TBLPTRU equ 0FF8h ;# ">
+"6820
+[; <" PCLAT equ 0FF9h ;# ">
+"6827
+[; <" PC equ 0FF9h ;# ">
+"6833
+[; <" PCL equ 0FF9h ;# ">
+"6839
+[; <" PCLATH equ 0FFAh ;# ">
+"6845
+[; <" PCLATU equ 0FFBh ;# ">
+"6851
+[; <" STKPTR equ 0FFCh ;# ">
+"6956
+[; <" TOS equ 0FFDh ;# ">
+"6962
+[; <" TOSL equ 0FFDh ;# ">
+"6968
+[; <" TOSH equ 0FFEh ;# ">
+"6974
+[; <" TOSU equ 0FFFh ;# ">
+"17 Main.c
+[p x OSC=INTIO67 ]
+"18
+[p x BOREN=OFF ]
+"19
+[p x WDT=OFF ]
+"20
+[p x LVP=OFF ]
+"21
+[p x CCP2MX=PORTBE ]
+"24
+[v _second `uc ~T0 @X0 1 e ]
+[i _second
+-> -> 0 `i `uc
+]
+"25
+[v _minute `uc ~T0 @X0 1 e ]
+[i _minute
+-> -> 0 `i `uc
+]
+"26
+[v _hour `uc ~T0 @X0 1 e ]
+[i _hour
+-> -> 0 `i `uc
+]
+"27
+[v _dow `uc ~T0 @X0 1 e ]
+[i _dow
+-> -> 0 `i `uc
+]
+"28
+[v _day `uc ~T0 @X0 1 e ]
+[i _day
+-> -> 0 `i `uc
+]
+"29
+[v _month `uc ~T0 @X0 1 e ]
+[i _month
+-> -> 0 `i `uc
+]
+"30
+[v _year `uc ~T0 @X0 1 e ]
+[i _year
+-> -> 0 `i `uc
+]
+"32
+[v _found `uc ~T0 @X0 1 e ]
+"33
+[v _tempSecond `uc ~T0 @X0 1 e ]
+[i _tempSecond
+-> -> 255 `i `uc
+]
+"34
+[v _DS1621_tempC `i ~T0 @X0 1 e ]
+[v _DS1621_tempF `i ~T0 @X0 1 e ]
+"35
+[v _setup_second `uc ~T0 @X0 1 e ]
+[v _setup_minute `uc ~T0 @X0 1 e ]
+[v _setup_hour `uc ~T0 @X0 1 e ]
+[v _setup_day `uc ~T0 @X0 1 e ]
+[v _setup_month `uc ~T0 @X0 1 e ]
+[v _setup_year `uc ~T0 @X0 1 e ]
+"36
+[v _alarm_second `uc ~T0 @X0 1 e ]
+[v _alarm_minute `uc ~T0 @X0 1 e ]
+[v _alarm_hour `uc ~T0 @X0 1 e ]
+[v _alarm_date `uc ~T0 @X0 1 e ]
+"37
+[v _setup_alarm_second `uc ~T0 @X0 1 e ]
+[v _setup_alarm_minute `uc ~T0 @X0 1 e ]
+[v _setup_alarm_hour `uc ~T0 @X0 1 e ]
+"38
+[v _fan_set_temp `uc ~T0 @X0 1 e ]
+[i _fan_set_temp
+-> -> 75 `i `uc
+]
+"39
+[v _Nec_state `uc ~T0 @X0 1 e ]
+[i _Nec_state
+-> -> 0 `i `uc
+]
+"40
+[v _volt `f ~T0 @X0 1 e ]
+"41
+[v _INT1_flag `uc ~T0 @X0 1 e ]
+[v _INT2_flag `uc ~T0 @X0 1 e ]
+"43
+[v _nec_ok `s ~T0 @X0 1 e ]
+[i _nec_ok
+-> -> 0 `i `s
+]
+"44
+[v _Nec_code1 `uc ~T0 @X0 1 e ]
+"45
+[v _FAN `uc ~T0 @X0 1 e ]
+"46
+[v _duty_cycle `uc ~T0 @X0 1 e ]
+"47
+[v _rps `i ~T0 @X0 1 e ]
+"48
+[v _rpm `i ~T0 @X0 1 e ]
+"49
+[v _ALARMEN `i ~T0 @X0 1 e ]
+"50
+[v _alarm_mode `i ~T0 @X0 1 e ]
+[v _MATCHED `i ~T0 @X0 1 e ]
+[v _color `i ~T0 @X0 1 e ]
+"53
+[v _buffer `uc ~T0 @X0 -> 31 `i e ]
+[i _buffer
+:U ..
+-> 32 `c
+-> 69 `c
+-> 67 `c
+-> 69 `c
+-> 51 `c
+-> 51 `c
+-> 48 `c
+-> 49 `c
+-> 76 `c
+-> 32 `c
+-> 83 `c
+-> 112 `c
+-> 39 `c
+-> 50 `c
+-> 49 `c
+-> 32 `c
+-> 70 `c
+-> 105 `c
+-> 110 `c
+-> 97 `c
+-> 108 `c
+-> 0 `c
+-> 0 `c
+..
+]
+"54
+[v _nbr `*uc ~T0 @X0 1 e ]
+"55
+[v _txt `*uc ~T0 @X0 1 e ]
+"56
+[v _tempC `uc ~T0 @X0 -> 0 `x e ]
+[i _tempC
+:U ..
+-> 43 `c
+-> 50 `c
+-> 53 `c
+-> 0 `c
+..
+]
+"57
+[v _tempF `uc ~T0 @X0 -> 0 `x e ]
+[i _tempF
+:U ..
+-> 43 `c
+-> 55 `c
+-> 55 `c
+-> 0 `c
+..
+]
+"58
+[v _time `uc ~T0 @X0 -> 0 `x e ]
+[i _time
+:U ..
+-> 48 `c
+-> 48 `c
+-> 58 `c
+-> 48 `c
+-> 48 `c
+-> 58 `c
+-> 48 `c
+-> 48 `c
+-> 0 `c
+..
+]
+"59
+[v _date `uc ~T0 @X0 -> 0 `x e ]
+[i _date
+:U ..
+-> 48 `c
+-> 48 `c
+-> 47 `c
+-> 48 `c
+-> 48 `c
+-> 47 `c
+-> 48 `c
+-> 48 `c
+-> 0 `c
+..
+]
+"60
+[v _alarm_time `uc ~T0 @X0 -> 0 `x e ]
+[i _alarm_time
+:U ..
+-> 48 `c
+-> 48 `c
+-> 58 `c
+-> 48 `c
+-> 48 `c
+-> 58 `c
+-> 48 `c
+-> 48 `c
+-> 0 `c
+..
+]
+"61
+[v _Alarm_SW_Txt `uc ~T0 @X0 -> 0 `x e ]
+[i _Alarm_SW_Txt
+:U ..
+-> 79 `c
+-> 70 `c
+-> 70 `c
+-> 0 `c
+..
+]
+"62
+[v _Fan_Set_Temp_Txt `uc ~T0 @X0 -> 0 `x e ]
+[i _Fan_Set_Temp_Txt
+:U ..
+-> 48 `c
+-> 55 `c
+-> 53 `c
+-> 70 `c
+-> 0 `c
+..
+]
+"63
+[v _Fan_SW_Txt `uc ~T0 @X0 -> 0 `x e ]
+[i _Fan_SW_Txt
+:U ..
+-> 79 `c
+-> 70 `c
+-> 70 `c
+-> 0 `c
+..
+]
+"64
+[v _array1 `uc ~T0 @X0 -> 21 `i e ]
+[i _array1
+:U ..
+-> -> 162 `i `uc
+-> -> 98 `i `uc
+-> -> 226 `i `uc
+-> -> 34 `i `uc
+-> -> 2 `i `uc
+-> -> 194 `i `uc
+-> -> 224 `i `uc
+-> -> 168 `i `uc
+-> -> 144 `i `uc
+-> -> 104 `i `uc
+-> -> 152 `i `uc
+-> -> 176 `i `uc
+-> -> 48 `i `uc
+-> -> 24 `i `uc
+-> -> 122 `i `uc
+-> -> 16 `i `uc
+-> -> 56 `i `uc
+-> -> 90 `i `uc
+-> -> 66 `i `uc
+-> -> 74 `i `uc
+-> -> 82 `i `uc
+..
+]
+"67
+[v _DC_Txt `uc ~T0 @X0 -> 0 `x e ]
+[i _DC_Txt
+:U ..
+-> 48 `c
+-> 48 `c
+-> 48 `c
+-> 0 `c
+..
+]
+"68
+[v _Volt_Txt `uc ~T0 @X0 -> 0 `x e ]
+[i _Volt_Txt
+:U ..
+-> 48 `c
+-> 46 `c
+-> 48 `c
+-> 48 `c
+-> 86 `c
+-> 0 `c
+..
+]
+"69
+[v _RTC_ALARM_Txt `uc ~T0 @X0 -> 0 `x e ]
+[i _RTC_ALARM_Txt
+:U ..
+-> 48 `c
+-> 0 `c
+..
+]
+"70
+[v _RPM_Txt `uc ~T0 @X0 -> 0 `x e ]
+[i _RPM_Txt
+:U ..
+-> 48 `c
+-> 48 `c
+-> 48 `c
+-> 48 `c
+-> 0 `c
+..
+]
+"72
+[v _setup_time `uc ~T0 @X0 -> 0 `x e ]
+[i _setup_time
+:U ..
+-> 48 `c
+-> 48 `c
+-> 58 `c
+-> 48 `c
+-> 48 `c
+-> 58 `c
+-> 48 `c
+-> 48 `c
+-> 0 `c
+..
+]
+"73
+[v _setup_date `uc ~T0 @X0 -> 0 `x e ]
+[i _setup_date
+:U ..
+-> 48 `c
+-> 49 `c
+-> 47 `c
+-> 48 `c
+-> 49 `c
+-> 47 `c
+-> 48 `c
+-> 48 `c
+-> 0 `c
+..
+]
+"74
+[v _setup_alarm_time `uc ~T0 @X0 -> 0 `x e ]
+[i _setup_alarm_time
+:U ..
+-> 48 `c
+-> 48 `c
+-> 58 `c
+-> 48 `c
+-> 48 `c
+-> 58 `c
+-> 48 `c
+-> 48 `c
+-> 0 `c
+..
+]
+"75
+[v _setup_fan_set_text `uc ~T0 @X0 -> 0 `x e ]
+[i _setup_fan_set_text
+:U ..
+-> 48 `c
+-> 55 `c
+-> 53 `c
+-> 70 `c
+-> 0 `c
+..
+]
+"78
+[v _putch `(v ~T0 @X0 1 ef1`uc ]
+"79
+{
+[e :U _putch ]
+"78
+[v _c `uc ~T0 @X0 1 r1 ]
+"79
+[f ]
+"80
+[e $U 397  ]
+[e :U 398 ]
+[e :U 397 ]
+[e $ ! _TRMT 398  ]
+[e :U 399 ]
+"81
+[e = _TXREG _c ]
+"82
+[e :UE 396 ]
+}
+"84
+[v _init_UART `(v ~T0 @X0 1 ef ]
+"85
+{
+[e :U _init_UART ]
+[f ]
+"86
+[e ( _OpenUSART (2 , -> & & & & & -> 127 `i -> 191 `i -> 254 `i -> 253 `i -> 255 `i -> 255 `i `uc -> -> 25 `i `ui ]
+"87
+[e = _OSCCON -> -> 112 `i `uc ]
+"88
+[e :UE 400 ]
+}
+"92
+[v _Do_Init `(v ~T0 @X0 1 ef ]
+"93
+{
+[e :U _Do_Init ]
+[f ]
+"94
+[e ( _init_UART ..  ]
+"95
+[e ( _Init_ADC ..  ]
+"96
+[e = _OSCCON -> -> 112 `i `uc ]
+"98
+[e = _ADCON1 -> -> 14 `i `uc ]
+"99
+[e = _TRISA -> -> 17 `i `uc ]
+"100
+[e = _TRISB -> -> 39 `i `uc ]
+"101
+[e = _TRISC -> -> 1 `i `uc ]
+"102
+[e = _TRISD -> -> 0 `i `uc ]
+"103
+[e = _TRISE -> -> 0 `i `uc ]
+"104
+[e = _PORTE -> -> 0 `i `uc ]
+"106
+[e = _FAN -> -> 0 `i `uc ]
+"107
+[e = _RBPU -> -> 0 `i `b ]
+"109
+[e = _TMR3L -> -> 0 `i `uc ]
+"110
+[e = _T3CON -> -> 3 `i `uc ]
+"111
+[e ( _I2C_Init (1 -> -> 100000 `l `ul ]
+"113
+[e ( _DS1621_Init ..  ]
+"114
+[e ( _Init_Interrupt ..  ]
+"115
+[e ( _Turn_Off_Fan ..  ]
+"116
+[e = _fan_set_temp -> -> 75 `i `uc ]
+"117
+[e :UE 401 ]
+}
+"120
+[v _main `(v ~T0 @X0 1 ef ]
+"121
+{
+[e :U _main ]
+[f ]
+"122
+[e ( _Do_Init ..  ]
+"123
+[e ( _Initialize_Screen ..  ]
+"124
+[e ( _DS3231_Turn_Off_Alarm ..  ]
+"125
+[e ( _DS3231_Read_Alarm_Time ..  ]
+"126
+[e = _ALARMEN -> 0 `i ]
+"127
+[e = _tempSecond -> -> 255 `i `uc ]
+"128
+[e :U 404 ]
+"129
+{
+"130
+[e ( _DS3231_Read_Time ..  ]
+"131
+[e $ ! != -> _tempSecond `i -> _second `i 406  ]
+"132
+{
+"133
+[e = _tempSecond _second ]
+"134
+[e = _rpm ( _get_RPM ..  ]
+"135
+[e = _volt ( _read_volt ..  ]
+"136
+[e = _DS1621_tempC ( _DS1621_Read_Temp ..  ]
+"137
+[e = _DS1621_tempF + / * _DS1621_tempC -> 9 `i -> 5 `i -> 32 `i ]
+"139
+[e ( _printf , , , , , , (. :s 1C -> _hour `i -> _minute `i -> _second `i -> _month `i -> _day `i -> _year `i ]
+"140
+[e ( _printf , , (. :s 2C _DS1621_tempC _DS1621_tempF ]
+"141
+[e ( _printf , , (. :s 3C -> . . _PORTBbits 0 5 `i _MATCHED ]
+"142
+[e ( _printf , , (. :s 4C _rpm -> _duty_cycle `i ]
+"143
+[e ( _printf , (. :s 5C -> _volt `d ]
+"144
+[e ( _Monitor_Fan ..  ]
+"145
+[e ( _test_alarm ..  ]
+"146
+[e ( _Update_Screen ..  ]
+"147
+}
+[e :U 406 ]
+"149
+[e $ ! == -> ( _check_for_button_input ..  `i -> 1 `i 407  ]
+"150
+{
+"151
+[e = _nec_ok -> -> 0 `i `s ]
+"152
+[e $U 409  ]
+"153
+{
+"154
+[e :U 410 ]
+"155
+[e ( _Do_Beep_Good ..  ]
+"156
+[e ( _Do_Setup_Time ..  ]
+"157
+[e $U 408  ]
+"159
+[e :U 411 ]
+"160
+[e ( _Do_Beep_Good ..  ]
+"161
+[e ( _Do_Setup_Alarm_Time ..  ]
+"162
+[e $U 408  ]
+"164
+[e :U 412 ]
+"165
+[e ( _Do_Beep_Good ..  ]
+"166
+[e ( _Setup_Temp_Fan ..  ]
+"167
+[e $U 408  ]
+"169
+[e :U 413 ]
+"170
+[e ( _Do_Beep_Good ..  ]
+"171
+[e ( _Toggle_Fan_Monitor ..  ]
+"172
+[e $U 408  ]
+"174
+[e :U 414 ]
+"175
+[e ( _Do_Beep_Bad ..  ]
+"176
+[e $U 408  ]
+"177
+}
+[e $U 408  ]
+"152
+[e :U 409 ]
+[e [\ _found , $ -> -> 0 `i `uc 410
+ , $ -> -> 1 `i `uc 411
+ , $ -> -> 2 `i `uc 412
+ , $ -> -> 5 `i `uc 413
+ 414 ]
+"177
+[e :U 408 ]
+"178
+}
+[e :U 407 ]
+"179
+[e $ ! == -> _INT2_flag `i -> 1 `i 415  ]
+"180
+{
+"181
+[e = _INT2_flag -> -> 0 `i `uc ]
+"182
+[e $ ! == _ALARMEN -> 0 `i 416  ]
+[e = _ALARMEN -> 1 `i ]
+[e $U 417  ]
+"183
+[e :U 416 ]
+[e = _ALARMEN -> 0 `i ]
+[e :U 417 ]
+"184
+}
+[e :U 415 ]
+"186
+}
+[e :U 403 ]
+"128
+[e $U 404  ]
+[e :U 405 ]
+"187
+[e :UE 402 ]
+}
+"189
+[v _test_alarm `(v ~T0 @X0 1 ef ]
+"190
+{
+[e :U _test_alarm ]
+[f ]
+"194
+[e $ ! == _alarm_mode -> 0 `i 419  ]
+"195
+{
+"196
+[e $ ! == _ALARMEN -> 1 `i 420  ]
+"197
+{
+"198
+[e ( _DS3231_Turn_On_Alarm ..  ]
+"199
+[e = _alarm_mode -> 1 `i ]
+"200
+}
+[e $U 421  ]
+[e :U 420 ]
+"201
+{
+"202
+[e ( _DS3231_Turn_Off_Alarm ..  ]
+"203
+}
+[e :U 421 ]
+"204
+}
+[e :U 419 ]
+"206
+[e $ ! == _MATCHED -> 1 `i 422  ]
+"207
+{
+"210
+[e $ ! > _volt -> -> 3 `i `f 423  ]
+"211
+{
+"212
+[e = _MATCHED -> 0 `i ]
+"213
+[e = _color -> 0 `i ]
+"214
+[e ( _Set_RGB_Color (1 -> _color `uc ]
+"215
+[e ( _Deactivate_Buzzer ..  ]
+"216
+[e ( _DS3231_Turn_Off_Alarm ..  ]
+"217
+}
+[e :U 423 ]
+"218
+}
+[e :U 422 ]
+"220
+[e $ ! == _alarm_mode -> 1 `i 424  ]
+"221
+{
+"222
+[e $ ! == _ALARMEN -> 1 `i 425  ]
+"223
+{
+"224
+[e $ ! == -> . . _PORTBbits 0 5 `i -> 0 `i 426  ]
+"225
+{
+"226
+[e ( _Set_RGB_Color (1 -> ++ _color -> 1 `i `uc ]
+"227
+[e ( _Activate_Buzzer_4KHz ..  ]
+"228
+[e = _MATCHED -> 1 `i ]
+"230
+}
+[e :U 426 ]
+"231
+}
+[e $U 427  ]
+"232
+[e :U 425 ]
+"233
+{
+"234
+[e ( _DS3231_Turn_Off_Alarm ..  ]
+"235
+[e = _alarm_mode -> 0 `i ]
+"236
+[e = _color -> 0 `i ]
+"237
+[e ( _Set_RGB_Color (1 -> _color `uc ]
+"238
+[e ( _Deactivate_Buzzer ..  ]
+"239
+[e = _MATCHED -> 0 `i ]
+"240
+}
+[e :U 427 ]
+"241
+}
+[e :U 424 ]
+"249
+[e :UE 418 ]
+}
+[p f _printf 12624004 ]
+[a 1C 37 48 50 120 58 37 48 50 120 58 37 48 50 120 32 37 48 50 120 47 37 48 50 120 47 37 48 50 120 0 ]
+[a 3C 97 108 97 114 109 32 61 32 37 100 32 109 97 116 99 104 32 61 32 37 100 32 0 ]
+[a 4C 82 80 77 32 61 32 37 100 32 32 100 99 32 61 32 37 100 32 0 ]
+[a 2C 32 84 101 109 112 32 61 32 37 100 32 67 32 61 32 37 100 32 70 32 0 ]
+[a 5C 86 111 108 116 32 61 32 37 102 13 10 0 ]

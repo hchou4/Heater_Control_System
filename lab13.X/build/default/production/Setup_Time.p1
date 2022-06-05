@@ -1,0 +1,1088 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"2 I2C_Support.h
+[v _DS3231_Read_Time `(v ~T0 @X0 0 ef ]
+"15 Setup_Time.c
+[v _setup_second `uc ~T0 @X0 0 e ]
+"2 utils.h
+[v _bcd_2_dec `(uc ~T0 @X0 0 ef1`uc ]
+"14 Setup_Time.c
+[v _second `uc ~T0 @X0 0 e ]
+"15
+[v _setup_minute `uc ~T0 @X0 0 e ]
+"14
+[v _minute `uc ~T0 @X0 0 e ]
+"15
+[v _setup_hour `uc ~T0 @X0 0 e ]
+"14
+[v _hour `uc ~T0 @X0 0 e ]
+"15
+[v _setup_day `uc ~T0 @X0 0 e ]
+"14
+[v _day `uc ~T0 @X0 0 e ]
+"15
+[v _setup_month `uc ~T0 @X0 0 e ]
+"14
+[v _month `uc ~T0 @X0 0 e ]
+"15
+[v _setup_year `uc ~T0 @X0 0 e ]
+"14
+[v _year `uc ~T0 @X0 0 e ]
+"7 Setup_Time.h
+[v _Initialize_Setup_Time_Screen `(v ~T0 @X0 0 ef ]
+"8
+[v _Update_Setup_Time_Screen `(v ~T0 @X0 0 ef ]
+"1 utils.h
+[v _check_for_button_input `(uc ~T0 @X0 0 ef ]
+"27 Setup_Time.c
+[v _found `uc ~T0 @X0 0 e ]
+"5 utils.h
+[v _Do_Beep_Good `(v ~T0 @X0 0 ef ]
+"5 Setup_Time.h
+[v _Go_Prev_Field `(v ~T0 @X0 0 ef ]
+"4
+[v _Go_Next_Field `(v ~T0 @X0 0 ef ]
+"6
+[v _Do_Save_New_Time `(v ~T0 @X0 0 ef ]
+"3
+[v _Decrease_Time `(v ~T0 @X0 0 ef ]
+"2
+[v _Increase_Time `(v ~T0 @X0 0 ef ]
+"12
+[v _Exit_Time_Setup `(v ~T0 @X0 0 ef ]
+"6 utils.h
+[v _Do_Beep_Bad `(v ~T0 @X0 0 ef ]
+"9 Setup_Time.h
+[v _Update_Setup_Screen_Cursor_Forward `(v ~T0 @X0 0 ef1`uc ]
+"10
+[v _Update_Setup_Screen_Cursor_Backward `(v ~T0 @X0 0 ef1`uc ]
+"3 I2C_Support.h
+[v _DS3231_Write_Time `(v ~T0 @X0 0 ef ]
+"2 Main_Screen.h
+[v _Initialize_Screen `(v ~T0 @X0 0 ef ]
+"101 ST7735_TFT.h
+[v _fillScreen `(v ~T0 @X0 0 ef1`ui ]
+"43 C:\Program Files (x86)\Microchip\xc8\v1.34\include\string.h
+[v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
+"22 Setup_Time.c
+[v _txt `*uc ~T0 @X0 0 e ]
+"94 ST7735_TFT.h
+[v _drawtext `(v ~T0 @X0 0 ef6`uc`uc`*uc`ui`ui`uc ]
+"93
+[v _fillRect `(v ~T0 @X0 0 ef5`uc`uc`uc`uc`ui ]
+"17 Setup_Time.c
+[v _setup_time `uc ~T0 @X0 -> 0 `x e ]
+"18
+[v _setup_date `uc ~T0 @X0 -> 0 `x e ]
+"51 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4620.h
+[; <" PORTA equ 0F80h ;# ">
+"189
+[; <" PORTB equ 0F81h ;# ">
+"359
+[; <" PORTC equ 0F82h ;# ">
+"536
+[; <" PORTD equ 0F83h ;# ">
+"677
+[; <" PORTE equ 0F84h ;# ">
+"1005
+[; <" LATA equ 0F89h ;# ">
+"1137
+[; <" LATB equ 0F8Ah ;# ">
+"1269
+[; <" LATC equ 0F8Bh ;# ">
+"1401
+[; <" LATD equ 0F8Ch ;# ">
+"1533
+[; <" LATE equ 0F8Dh ;# ">
+"1635
+[; <" TRISA equ 0F92h ;# ">
+"1640
+[; <" DDRA equ 0F92h ;# ">
+"1856
+[; <" TRISB equ 0F93h ;# ">
+"1861
+[; <" DDRB equ 0F93h ;# ">
+"2077
+[; <" TRISC equ 0F94h ;# ">
+"2082
+[; <" DDRC equ 0F94h ;# ">
+"2298
+[; <" TRISD equ 0F95h ;# ">
+"2303
+[; <" DDRD equ 0F95h ;# ">
+"2519
+[; <" TRISE equ 0F96h ;# ">
+"2524
+[; <" DDRE equ 0F96h ;# ">
+"2682
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"2746
+[; <" PIE1 equ 0F9Dh ;# ">
+"2825
+[; <" PIR1 equ 0F9Eh ;# ">
+"2904
+[; <" IPR1 equ 0F9Fh ;# ">
+"2983
+[; <" PIE2 equ 0FA0h ;# ">
+"3048
+[; <" PIR2 equ 0FA1h ;# ">
+"3113
+[; <" IPR2 equ 0FA2h ;# ">
+"3178
+[; <" EECON1 equ 0FA6h ;# ">
+"3243
+[; <" EECON2 equ 0FA7h ;# ">
+"3249
+[; <" EEDATA equ 0FA8h ;# ">
+"3255
+[; <" EEADR equ 0FA9h ;# ">
+"3261
+[; <" EEADRH equ 0FAAh ;# ">
+"3267
+[; <" RCSTA equ 0FABh ;# ">
+"3272
+[; <" RCSTA1 equ 0FABh ;# ">
+"3476
+[; <" TXSTA equ 0FACh ;# ">
+"3481
+[; <" TXSTA1 equ 0FACh ;# ">
+"3773
+[; <" TXREG equ 0FADh ;# ">
+"3778
+[; <" TXREG1 equ 0FADh ;# ">
+"3784
+[; <" RCREG equ 0FAEh ;# ">
+"3789
+[; <" RCREG1 equ 0FAEh ;# ">
+"3795
+[; <" SPBRG equ 0FAFh ;# ">
+"3800
+[; <" SPBRG1 equ 0FAFh ;# ">
+"3806
+[; <" SPBRGH equ 0FB0h ;# ">
+"3812
+[; <" T3CON equ 0FB1h ;# ">
+"3925
+[; <" TMR3 equ 0FB2h ;# ">
+"3931
+[; <" TMR3L equ 0FB2h ;# ">
+"3937
+[; <" TMR3H equ 0FB3h ;# ">
+"3943
+[; <" CMCON equ 0FB4h ;# ">
+"4038
+[; <" CVRCON equ 0FB5h ;# ">
+"4116
+[; <" ECCP1AS equ 0FB6h ;# ">
+"4197
+[; <" PWM1CON equ 0FB7h ;# ">
+"4266
+[; <" BAUDCON equ 0FB8h ;# ">
+"4271
+[; <" BAUDCTL equ 0FB8h ;# ">
+"4437
+[; <" CCP2CON equ 0FBAh ;# ">
+"4515
+[; <" CCPR2 equ 0FBBh ;# ">
+"4521
+[; <" CCPR2L equ 0FBBh ;# ">
+"4527
+[; <" CCPR2H equ 0FBCh ;# ">
+"4533
+[; <" CCP1CON equ 0FBDh ;# ">
+"4629
+[; <" CCPR1 equ 0FBEh ;# ">
+"4635
+[; <" CCPR1L equ 0FBEh ;# ">
+"4641
+[; <" CCPR1H equ 0FBFh ;# ">
+"4647
+[; <" ADCON2 equ 0FC0h ;# ">
+"4717
+[; <" ADCON1 equ 0FC1h ;# ">
+"4807
+[; <" ADCON0 equ 0FC2h ;# ">
+"4929
+[; <" ADRES equ 0FC3h ;# ">
+"4935
+[; <" ADRESL equ 0FC3h ;# ">
+"4941
+[; <" ADRESH equ 0FC4h ;# ">
+"4947
+[; <" SSPCON2 equ 0FC5h ;# ">
+"5008
+[; <" SSPCON1 equ 0FC6h ;# ">
+"5077
+[; <" SSPSTAT equ 0FC7h ;# ">
+"5316
+[; <" SSPADD equ 0FC8h ;# ">
+"5322
+[; <" SSPBUF equ 0FC9h ;# ">
+"5328
+[; <" T2CON equ 0FCAh ;# ">
+"5398
+[; <" PR2 equ 0FCBh ;# ">
+"5403
+[; <" MEMCON equ 0FCBh ;# ">
+"5507
+[; <" TMR2 equ 0FCCh ;# ">
+"5513
+[; <" T1CON equ 0FCDh ;# ">
+"5617
+[; <" TMR1 equ 0FCEh ;# ">
+"5623
+[; <" TMR1L equ 0FCEh ;# ">
+"5629
+[; <" TMR1H equ 0FCFh ;# ">
+"5635
+[; <" RCON equ 0FD0h ;# ">
+"5767
+[; <" WDTCON equ 0FD1h ;# ">
+"5794
+[; <" HLVDCON equ 0FD2h ;# ">
+"5799
+[; <" LVDCON equ 0FD2h ;# ">
+"6063
+[; <" OSCCON equ 0FD3h ;# ">
+"6139
+[; <" T0CON equ 0FD5h ;# ">
+"6215
+[; <" TMR0 equ 0FD6h ;# ">
+"6221
+[; <" TMR0L equ 0FD6h ;# ">
+"6227
+[; <" TMR0H equ 0FD7h ;# ">
+"6233
+[; <" STATUS equ 0FD8h ;# ">
+"6311
+[; <" FSR2 equ 0FD9h ;# ">
+"6317
+[; <" FSR2L equ 0FD9h ;# ">
+"6323
+[; <" FSR2H equ 0FDAh ;# ">
+"6329
+[; <" PLUSW2 equ 0FDBh ;# ">
+"6335
+[; <" PREINC2 equ 0FDCh ;# ">
+"6341
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"6347
+[; <" POSTINC2 equ 0FDEh ;# ">
+"6353
+[; <" INDF2 equ 0FDFh ;# ">
+"6359
+[; <" BSR equ 0FE0h ;# ">
+"6365
+[; <" FSR1 equ 0FE1h ;# ">
+"6371
+[; <" FSR1L equ 0FE1h ;# ">
+"6377
+[; <" FSR1H equ 0FE2h ;# ">
+"6383
+[; <" PLUSW1 equ 0FE3h ;# ">
+"6389
+[; <" PREINC1 equ 0FE4h ;# ">
+"6395
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"6401
+[; <" POSTINC1 equ 0FE6h ;# ">
+"6407
+[; <" INDF1 equ 0FE7h ;# ">
+"6413
+[; <" WREG equ 0FE8h ;# ">
+"6424
+[; <" FSR0 equ 0FE9h ;# ">
+"6430
+[; <" FSR0L equ 0FE9h ;# ">
+"6436
+[; <" FSR0H equ 0FEAh ;# ">
+"6442
+[; <" PLUSW0 equ 0FEBh ;# ">
+"6448
+[; <" PREINC0 equ 0FECh ;# ">
+"6454
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"6460
+[; <" POSTINC0 equ 0FEEh ;# ">
+"6466
+[; <" INDF0 equ 0FEFh ;# ">
+"6472
+[; <" INTCON3 equ 0FF0h ;# ">
+"6563
+[; <" INTCON2 equ 0FF1h ;# ">
+"6632
+[; <" INTCON equ 0FF2h ;# ">
+"6768
+[; <" PROD equ 0FF3h ;# ">
+"6774
+[; <" PRODL equ 0FF3h ;# ">
+"6780
+[; <" PRODH equ 0FF4h ;# ">
+"6786
+[; <" TABLAT equ 0FF5h ;# ">
+"6794
+[; <" TBLPTR equ 0FF6h ;# ">
+"6800
+[; <" TBLPTRL equ 0FF6h ;# ">
+"6806
+[; <" TBLPTRH equ 0FF7h ;# ">
+"6812
+[; <" TBLPTRU equ 0FF8h ;# ">
+"6820
+[; <" PCLAT equ 0FF9h ;# ">
+"6827
+[; <" PC equ 0FF9h ;# ">
+"6833
+[; <" PCL equ 0FF9h ;# ">
+"6839
+[; <" PCLATH equ 0FFAh ;# ">
+"6845
+[; <" PCLATU equ 0FFBh ;# ">
+"6851
+[; <" STKPTR equ 0FFCh ;# ">
+"6956
+[; <" TOS equ 0FFDh ;# ">
+"6962
+[; <" TOSL equ 0FFDh ;# ">
+"6968
+[; <" TOSH equ 0FFEh ;# ">
+"6974
+[; <" TOSU equ 0FFFh ;# ">
+"30 Setup_Time.c
+[v _In_Time_Setup `uc ~T0 @X0 1 e ]
+"31
+[v _Select_Field `uc ~T0 @X0 1 e ]
+"33
+[v _Do_Setup_Time `(v ~T0 @X0 1 ef ]
+"34
+{
+[e :U _Do_Setup_Time ]
+[f ]
+"36
+[e = _Select_Field -> -> 0 `i `uc ]
+"38
+[e ( _DS3231_Read_Time ..  ]
+"39
+[e = _setup_second ( _bcd_2_dec (1 _second ]
+"40
+[e = _setup_minute ( _bcd_2_dec (1 _minute ]
+"41
+[e = _setup_hour ( _bcd_2_dec (1 _hour ]
+"42
+[e = _setup_day ( _bcd_2_dec (1 _day ]
+"43
+[e = _setup_month ( _bcd_2_dec (1 _month ]
+"44
+[e = _setup_year ( _bcd_2_dec (1 _year ]
+"46
+[e ( _Initialize_Setup_Time_Screen ..  ]
+"47
+[e ( _Update_Setup_Time_Screen ..  ]
+"48
+[e = _In_Time_Setup -> -> 1 `i `uc ]
+"50
+[e $U 397  ]
+[e :U 398 ]
+"51
+{
+"52
+[e $ ! == -> ( _check_for_button_input ..  `i -> 1 `i 400  ]
+"53
+{
+"55
+[e $ ! && >= -> _found `i -> 3 `i <= -> _found `i -> 8 `i 401  ]
+"56
+{
+"57
+[e ( _Do_Beep_Good ..  ]
+"58
+[e $ ! == -> _found `i -> 3 `i 402  ]
+[e ( _Go_Prev_Field ..  ]
+[e :U 402 ]
+"59
+[e $ ! == -> _found `i -> 4 `i 403  ]
+[e ( _Go_Next_Field ..  ]
+[e :U 403 ]
+"60
+[e $ ! == -> _found `i -> 5 `i 404  ]
+[e ( _Do_Save_New_Time ..  ]
+[e :U 404 ]
+"61
+[e $ ! == -> _found `i -> 6 `i 405  ]
+[e ( _Decrease_Time ..  ]
+[e :U 405 ]
+"62
+[e $ ! == -> _found `i -> 7 `i 406  ]
+[e ( _Increase_Time ..  ]
+[e :U 406 ]
+"63
+[e $ ! == -> _found `i -> 8 `i 407  ]
+[e ( _Exit_Time_Setup ..  ]
+[e :U 407 ]
+"69
+[e = _found -> -> 255 `i `uc ]
+"70
+}
+[e $U 408  ]
+"71
+[e :U 401 ]
+"72
+{
+"73
+[e ( _Do_Beep_Bad ..  ]
+"74
+}
+[e :U 408 ]
+"75
+}
+[e :U 400 ]
+"76
+}
+[e :U 397 ]
+"50
+[e $ == -> _In_Time_Setup `i -> 1 `i 398  ]
+[e :U 399 ]
+"77
+[e :UE 396 ]
+}
+"79
+[v _Increase_Time `(v ~T0 @X0 1 ef ]
+"80
+{
+[e :U _Increase_Time ]
+[f ]
+"81
+[e $U 411  ]
+"82
+{
+"83
+[e :U 412 ]
+"84
+[e ++ _setup_hour -> -> 1 `i `uc ]
+"85
+[e $ ! == -> _setup_hour `i -> 24 `i 413  ]
+[e = _setup_hour -> -> 0 `i `uc ]
+[e :U 413 ]
+"86
+[e $U 410  ]
+"88
+[e :U 414 ]
+"89
+[e ++ _setup_minute -> -> 1 `i `uc ]
+"90
+[e $ ! == -> _setup_minute `i -> 60 `i 415  ]
+[e = _setup_minute -> -> 0 `i `uc ]
+[e :U 415 ]
+"91
+[e $U 410  ]
+"94
+[e :U 416 ]
+"95
+[e ++ _setup_second -> -> 1 `i `uc ]
+"96
+[e $ ! == -> _setup_second `i -> 60 `i 417  ]
+[e = _setup_second -> -> 0 `i `uc ]
+[e :U 417 ]
+"97
+[e $U 410  ]
+"100
+[e :U 418 ]
+"101
+[e ++ _setup_month -> -> 1 `i `uc ]
+"102
+[e $ ! == -> _setup_month `i + -> 12 `i -> 1 `i 419  ]
+[e = _setup_month -> -> 1 `i `uc ]
+[e :U 419 ]
+"103
+[e $U 410  ]
+"105
+[e :U 420 ]
+"106
+[e ++ _setup_day -> -> 1 `i `uc ]
+"108
+[e $U 422  ]
+"109
+{
+"110
+[e :U 423 ]
+"111
+[e :U 424 ]
+"112
+[e :U 425 ]
+"113
+[e :U 426 ]
+"114
+[e :U 427 ]
+"115
+[e :U 428 ]
+"116
+[e :U 429 ]
+"117
+[e $ ! == -> _setup_day `i + -> 31 `i -> 1 `i 430  ]
+[e = _setup_day -> -> 1 `i `uc ]
+[e :U 430 ]
+"118
+[e $U 421  ]
+"119
+[e :U 431 ]
+"120
+[e $ ! == -> _setup_day `i + -> 28 `i -> 1 `i 432  ]
+[e = _setup_day -> -> 1 `i `uc ]
+[e :U 432 ]
+"121
+[e $U 421  ]
+"122
+[e :U 433 ]
+"123
+[e :U 434 ]
+"124
+[e :U 435 ]
+"125
+[e :U 436 ]
+"126
+[e $ ! == -> _setup_day `i + -> 30 `i -> 1 `i 437  ]
+[e = _setup_day -> -> 1 `i `uc ]
+[e :U 437 ]
+"127
+[e $U 421  ]
+"129
+[e :U 438 ]
+"130
+[e = _setup_day -> -> 0 `i `uc ]
+"131
+[e $U 421  ]
+"132
+}
+[e $U 421  ]
+"108
+[e :U 422 ]
+[e [\ _setup_month , $ -> -> 1 `i `uc 423
+ , $ -> -> 3 `i `uc 424
+ , $ -> -> 5 `i `uc 425
+ , $ -> -> 7 `i `uc 426
+ , $ -> -> 8 `i `uc 427
+ , $ -> -> 10 `i `uc 428
+ , $ -> -> 12 `i `uc 429
+ , $ -> -> 2 `i `uc 431
+ , $ -> -> 4 `i `uc 433
+ , $ -> -> 6 `i `uc 434
+ , $ -> -> 9 `i `uc 435
+ , $ -> -> 11 `i `uc 436
+ 438 ]
+"132
+[e :U 421 ]
+"133
+[e $U 410  ]
+"136
+[e :U 439 ]
+"137
+[e ++ _setup_year -> -> 1 `i `uc ]
+"138
+[e $ ! == -> _setup_year `i -> 100 `i 440  ]
+[e = _setup_year -> -> 0 `i `uc ]
+[e :U 440 ]
+"139
+[e $U 410  ]
+"142
+[e :U 441 ]
+"143
+[e $U 410  ]
+"144
+}
+[e $U 410  ]
+"81
+[e :U 411 ]
+[e [\ _Select_Field , $ -> -> 0 `i `uc 412
+ , $ -> -> 1 `i `uc 414
+ , $ -> -> 2 `i `uc 416
+ , $ -> -> 3 `i `uc 418
+ , $ -> -> 4 `i `uc 420
+ , $ -> -> 5 `i `uc 439
+ 441 ]
+"144
+[e :U 410 ]
+"145
+[e ( _Update_Setup_Time_Screen ..  ]
+"146
+[e :UE 409 ]
+}
+"148
+[v _Decrease_Time `(v ~T0 @X0 1 ef ]
+"149
+{
+[e :U _Decrease_Time ]
+[f ]
+"150
+[e $U 444  ]
+"151
+{
+"152
+[e :U 445 ]
+"153
+[e $ ! == -> _setup_hour `i -> 0 `i 446  ]
+[e = _setup_hour -> -> 23 `i `uc ]
+[e $U 447  ]
+"154
+[e :U 446 ]
+[e =- _setup_hour -> -> 1 `i `uc ]
+[e :U 447 ]
+"155
+[e $U 443  ]
+"156
+[e :U 448 ]
+"157
+[e $ ! == -> _setup_minute `i -> 0 `i 449  ]
+[e = _setup_minute -> -> 59 `i `uc ]
+[e $U 450  ]
+"158
+[e :U 449 ]
+[e =- _setup_minute -> -> 1 `i `uc ]
+[e :U 450 ]
+"159
+[e $U 443  ]
+"160
+[e :U 451 ]
+"161
+[e $ ! == -> _setup_second `i -> 0 `i 452  ]
+[e = _setup_second -> -> 59 `i `uc ]
+[e $U 453  ]
+"162
+[e :U 452 ]
+[e =- _setup_second -> -> 1 `i `uc ]
+[e :U 453 ]
+"163
+[e $U 443  ]
+"164
+[e :U 454 ]
+"165
+[e $ ! == -> _setup_month `i -> 1 `i 455  ]
+[e = _setup_month -> -> 12 `i `uc ]
+[e $U 456  ]
+"166
+[e :U 455 ]
+[e =- _setup_month -> -> 1 `i `uc ]
+[e :U 456 ]
+"167
+[e $U 443  ]
+"168
+[e :U 457 ]
+"170
+[e -- _setup_day -> -> 1 `i `uc ]
+"172
+[e $U 459  ]
+"173
+{
+"174
+[e :U 460 ]
+"175
+[e :U 461 ]
+"176
+[e :U 462 ]
+"177
+[e :U 463 ]
+"178
+[e :U 464 ]
+"179
+[e :U 465 ]
+"180
+[e :U 466 ]
+"181
+[e $ ! == -> _setup_day `i -> 0 `i 467  ]
+[e = _setup_day -> -> 31 `i `uc ]
+[e :U 467 ]
+"182
+[e $U 458  ]
+"183
+[e :U 468 ]
+"184
+[e $ ! == -> _setup_day `i -> 0 `i 469  ]
+[e = _setup_day -> -> 28 `i `uc ]
+[e :U 469 ]
+"185
+[e $U 458  ]
+"186
+[e :U 470 ]
+"187
+[e :U 471 ]
+"188
+[e :U 472 ]
+"189
+[e :U 473 ]
+"190
+[e $ ! == -> _setup_day `i -> 0 `i 474  ]
+[e = _setup_day -> -> 30 `i `uc ]
+[e :U 474 ]
+"191
+[e $U 458  ]
+"193
+[e :U 475 ]
+"194
+[e = _setup_day -> -> 0 `i `uc ]
+"195
+[e $U 458  ]
+"196
+}
+[e $U 458  ]
+"172
+[e :U 459 ]
+[e [\ _setup_month , $ -> -> 1 `i `uc 460
+ , $ -> -> 3 `i `uc 461
+ , $ -> -> 5 `i `uc 462
+ , $ -> -> 7 `i `uc 463
+ , $ -> -> 8 `i `uc 464
+ , $ -> -> 10 `i `uc 465
+ , $ -> -> 12 `i `uc 466
+ , $ -> -> 2 `i `uc 468
+ , $ -> -> 4 `i `uc 470
+ , $ -> -> 6 `i `uc 471
+ , $ -> -> 9 `i `uc 472
+ , $ -> -> 11 `i `uc 473
+ 475 ]
+"196
+[e :U 458 ]
+"197
+[e $U 443  ]
+"199
+[e :U 476 ]
+"200
+[e $ ! == -> _setup_year `i -> 0 `i 477  ]
+[e = _setup_year -> -> 99 `i `uc ]
+[e $U 478  ]
+"201
+[e :U 477 ]
+[e =- _setup_year -> -> 1 `i `uc ]
+[e :U 478 ]
+"202
+[e $U 443  ]
+"203
+[e :U 479 ]
+"204
+[e $U 443  ]
+"205
+}
+[e $U 443  ]
+"150
+[e :U 444 ]
+[e [\ _Select_Field , $ -> -> 0 `i `uc 445
+ , $ -> -> 1 `i `uc 448
+ , $ -> -> 2 `i `uc 451
+ , $ -> -> 3 `i `uc 454
+ , $ -> -> 4 `i `uc 457
+ , $ -> -> 5 `i `uc 476
+ 479 ]
+"205
+[e :U 443 ]
+"206
+[e ( _Update_Setup_Time_Screen ..  ]
+"207
+[e :UE 442 ]
+}
+"209
+[v _Go_Next_Field `(v ~T0 @X0 1 ef ]
+"210
+{
+[e :U _Go_Next_Field ]
+[f ]
+"212
+[e ++ _Select_Field -> -> 1 `i `uc ]
+"213
+[e $ ! == -> _Select_Field `i -> 6 `i 481  ]
+[e = _Select_Field -> -> 0 `i `uc ]
+[e :U 481 ]
+"214
+[e ( _Update_Setup_Screen_Cursor_Forward (1 _Select_Field ]
+"216
+[e :UE 480 ]
+}
+"218
+[v _Go_Prev_Field `(v ~T0 @X0 1 ef ]
+"219
+{
+[e :U _Go_Prev_Field ]
+[f ]
+"220
+[e $ ! == -> _Select_Field `i -> 0 `i 483  ]
+[e = _Select_Field -> -> 5 `i `uc ]
+[e $U 484  ]
+"221
+[e :U 483 ]
+[e -- _Select_Field -> -> 1 `i `uc ]
+[e :U 484 ]
+"222
+[e ( _Update_Setup_Screen_Cursor_Backward (1 _Select_Field ]
+"223
+[e :UE 482 ]
+}
+"225
+[v _Do_Save_New_Time `(v ~T0 @X0 1 ef ]
+"226
+{
+[e :U _Do_Save_New_Time ]
+[f ]
+"227
+[e ( _DS3231_Write_Time ..  ]
+"228
+[e ( _DS3231_Read_Time ..  ]
+"229
+[e ( _Initialize_Screen ..  ]
+"230
+[e = _In_Time_Setup -> -> 0 `i `uc ]
+"231
+[e :UE 485 ]
+}
+"233
+[v _Exit_Time_Setup `(v ~T0 @X0 1 ef ]
+"234
+{
+[e :U _Exit_Time_Setup ]
+[f ]
+"235
+[e ( _DS3231_Read_Time ..  ]
+"236
+[e ( _Initialize_Screen ..  ]
+"237
+[e = _In_Time_Setup -> -> 0 `i `uc ]
+"238
+[e :UE 486 ]
+}
+"239
+[v _Initialize_Setup_Time_Screen `(v ~T0 @X0 1 ef ]
+"240
+{
+[e :U _Initialize_Setup_Time_Screen ]
+[f ]
+"241
+[e ( _fillScreen (1 -> -> 0 `i `ui ]
+"243
+[e ( _strcpy (2 , _txt :s 1C ]
+"244
+[e ( _drawtext (4 , , , , , -> -> 1 `i `uc -> -> 1 `i `uc _txt -> 65535 `ui -> -> 0 `i `ui -> -> 1 `i `uc ]
+"247
+[e ( _strcpy (2 , _txt :s 2C ]
+"248
+[e ( _drawtext (4 , , , , , -> + -> 1 `i -> 3 `i `uc -> + -> 1 `i -> 15 `i `uc _txt -> 63519 `ui -> -> 0 `i `ui -> -> 2 `i `uc ]
+"250
+[e ( _strcpy (2 , _txt :s 3C ]
+"251
+[e ( _drawtext (4 , , , , , -> -> 50 `i `uc -> -> 40 `i `uc _txt -> -> 31 `i `ui -> -> 0 `i `ui -> -> 1 `i `uc ]
+"253
+[e ( _fillRect (4 , , , , -> - -> 15 `i -> 1 `i `uc -> + -> 52 `i -> 16 `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 2047 `i `ui ]
+"254
+[e ( _strcpy (2 , _txt :s 4C ]
+"255
+[e ( _drawtext (4 , , , , , -> -> 50 `i `uc -> -> 71 `i `uc _txt -> 63488 `ui -> -> 0 `i `ui -> -> 1 `i `uc ]
+"256
+[e :UE 487 ]
+}
+"258
+[v _Update_Setup_Time_Screen `(v ~T0 @X0 1 ef ]
+"259
+{
+[e :U _Update_Setup_Time_Screen ]
+[f ]
+"260
+[e = *U + &U _setup_time * -> -> -> 0 `i `ui `ux -> -> # *U &U _setup_time `ui `ux -> + -> / -> _setup_hour `i -> 10 `i `ui -> 48 `ui `uc ]
+"261
+[e = *U + &U _setup_time * -> -> -> 1 `i `ui `ux -> -> # *U &U _setup_time `ui `ux -> + -> % -> _setup_hour `i -> 10 `i `ui -> 48 `ui `uc ]
+"262
+[e = *U + &U _setup_time * -> -> -> 3 `i `ui `ux -> -> # *U &U _setup_time `ui `ux -> + -> / -> _setup_minute `i -> 10 `i `ui -> 48 `ui `uc ]
+"263
+[e = *U + &U _setup_time * -> -> -> 4 `i `ui `ux -> -> # *U &U _setup_time `ui `ux -> + -> % -> _setup_minute `i -> 10 `i `ui -> 48 `ui `uc ]
+"264
+[e = *U + &U _setup_time * -> -> -> 6 `i `ui `ux -> -> # *U &U _setup_time `ui `ux -> + -> / -> _setup_second `i -> 10 `i `ui -> 48 `ui `uc ]
+"265
+[e = *U + &U _setup_time * -> -> -> 7 `i `ui `ux -> -> # *U &U _setup_time `ui `ux -> + -> % -> _setup_second `i -> 10 `i `ui -> 48 `ui `uc ]
+"267
+[e = *U + &U _setup_date * -> -> -> 0 `i `ui `ux -> -> # *U &U _setup_date `ui `ux -> + -> / -> _setup_month `i -> 10 `i `ui -> 48 `ui `uc ]
+"268
+[e = *U + &U _setup_date * -> -> -> 1 `i `ui `ux -> -> # *U &U _setup_date `ui `ux -> + -> % -> _setup_month `i -> 10 `i `ui -> 48 `ui `uc ]
+"269
+[e = *U + &U _setup_date * -> -> -> 3 `i `ui `ux -> -> # *U &U _setup_date `ui `ux -> + -> / -> _setup_day `i -> 10 `i `ui -> 48 `ui `uc ]
+"270
+[e = *U + &U _setup_date * -> -> -> 4 `i `ui `ux -> -> # *U &U _setup_date `ui `ux -> + -> % -> _setup_day `i -> 10 `i `ui -> 48 `ui `uc ]
+"271
+[e = *U + &U _setup_date * -> -> -> 6 `i `ui `ux -> -> # *U &U _setup_date `ui `ux -> + -> / -> _setup_year `i -> 10 `i `ui -> 48 `ui `uc ]
+"272
+[e = *U + &U _setup_date * -> -> -> 7 `i `ui `ux -> -> # *U &U _setup_date `ui `ux -> + -> % -> _setup_year `i -> 10 `i `ui -> 48 `ui `uc ]
+"274
+[e ( _drawtext (4 , , , , , -> -> 15 `i `uc -> -> 52 `i `uc &U _setup_time -> -> 2047 `i `ui -> -> 0 `i `ui -> -> 2 `i `uc ]
+"275
+[e ( _drawtext (4 , , , , , -> -> 15 `i `uc -> -> 82 `i `uc &U _setup_date -> -> 2016 `i `ui -> -> 0 `i `ui -> -> 2 `i `uc ]
+"276
+[e :UE 488 ]
+}
+"278
+[v _Update_Setup_Screen_Cursor_Forward `(v ~T0 @X0 1 ef1`uc ]
+"279
+{
+[e :U _Update_Setup_Screen_Cursor_Forward ]
+"278
+[v _field `uc ~T0 @X0 1 r1 ]
+"279
+[f ]
+"280
+[v _xinc `uc ~T0 @X0 1 a ]
+[e = _xinc -> -> 36 `i `uc ]
+"281
+[v _yinc `uc ~T0 @X0 1 a ]
+[e = _yinc -> -> 30 `i `uc ]
+"282
+[e $U 491  ]
+"283
+{
+"284
+[e :U 492 ]
+"285
+[e ( _fillRect (4 , , , , -> + - -> 15 `i -> 1 `i * -> 2 `i -> _xinc `i `uc -> + + -> 52 `i -> 16 `i -> _yinc `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 0 `i `ui ]
+"286
+[e ( _fillRect (4 , , , , -> + - -> 15 `i -> 1 `i * -> 2 `i -> _xinc `i `uc -> + -> 52 `i -> 16 `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 0 `i `ui ]
+"287
+[e ( _fillRect (4 , , , , -> - -> 15 `i -> 1 `i `uc -> + -> 52 `i -> 16 `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 2047 `i `ui ]
+"288
+[e $U 490  ]
+"290
+[e :U 493 ]
+"291
+[e ( _fillRect (4 , , , , -> - -> 15 `i -> 1 `i `uc -> + -> 52 `i -> 16 `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 0 `i `ui ]
+"292
+[e ( _fillRect (4 , , , , -> + - -> 15 `i -> 1 `i -> _xinc `i `uc -> + -> 52 `i -> 16 `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 2047 `i `ui ]
+"293
+[e $U 490  ]
+"295
+[e :U 494 ]
+"296
+[e ( _fillRect (4 , , , , -> + - -> 15 `i -> 1 `i -> _xinc `i `uc -> + -> 52 `i -> 16 `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 0 `i `ui ]
+"297
+[e ( _fillRect (4 , , , , -> + - -> 15 `i -> 1 `i * -> 2 `i -> _xinc `i `uc -> + -> 52 `i -> 16 `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 2047 `i `ui ]
+"298
+[e $U 490  ]
+"300
+[e :U 495 ]
+"301
+[e ( _fillRect (4 , , , , -> + - -> 15 `i -> 1 `i * -> 2 `i -> _xinc `i `uc -> + -> 52 `i -> 16 `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 0 `i `ui ]
+"302
+[e ( _fillRect (4 , , , , -> - -> 15 `i -> 1 `i `uc -> + + -> 52 `i -> 16 `i -> _yinc `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 2047 `i `ui ]
+"303
+[e $U 490  ]
+"305
+[e :U 496 ]
+"306
+[e ( _fillRect (4 , , , , -> - -> 15 `i -> 1 `i `uc -> + + -> 52 `i -> 16 `i -> _yinc `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 0 `i `ui ]
+"307
+[e ( _fillRect (4 , , , , -> + - -> 15 `i -> 1 `i -> _xinc `i `uc -> + + -> 52 `i -> 16 `i -> _yinc `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 2047 `i `ui ]
+"308
+[e $U 490  ]
+"310
+[e :U 497 ]
+"311
+[e ( _fillRect (4 , , , , -> + - -> 15 `i -> 1 `i -> _xinc `i `uc -> + + -> 52 `i -> 16 `i -> _yinc `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 0 `i `ui ]
+"312
+[e ( _fillRect (4 , , , , -> + - -> 15 `i -> 1 `i * -> 2 `i -> _xinc `i `uc -> + + -> 52 `i -> 16 `i -> _yinc `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 2047 `i `ui ]
+"313
+[e $U 490  ]
+"314
+}
+[e $U 490  ]
+"282
+[e :U 491 ]
+[e [\ _field , $ -> -> 0 `i `uc 492
+ , $ -> -> 1 `i `uc 493
+ , $ -> -> 2 `i `uc 494
+ , $ -> -> 3 `i `uc 495
+ , $ -> -> 4 `i `uc 496
+ , $ -> -> 5 `i `uc 497
+ 490 ]
+"314
+[e :U 490 ]
+"315
+[e :UE 489 ]
+}
+"317
+[v _Update_Setup_Screen_Cursor_Backward `(v ~T0 @X0 1 ef1`uc ]
+"318
+{
+[e :U _Update_Setup_Screen_Cursor_Backward ]
+"317
+[v _field `uc ~T0 @X0 1 r1 ]
+"318
+[f ]
+"319
+[v _xinc `uc ~T0 @X0 1 a ]
+[e = _xinc -> -> 36 `i `uc ]
+"320
+[v _yinc `uc ~T0 @X0 1 a ]
+[e = _yinc -> -> 30 `i `uc ]
+"321
+[e $U 500  ]
+"322
+{
+"323
+[e :U 501 ]
+"324
+[e ( _fillRect (4 , , , , -> + - -> 15 `i -> 1 `i -> _xinc `i `uc -> + -> 52 `i -> 16 `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 0 `i `ui ]
+"325
+[e ( _fillRect (4 , , , , -> - -> 15 `i -> 1 `i `uc -> + -> 52 `i -> 16 `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 2047 `i `ui ]
+"326
+[e $U 499  ]
+"328
+[e :U 502 ]
+"329
+[e ( _fillRect (4 , , , , -> + - -> 15 `i -> 1 `i * -> 2 `i -> _xinc `i `uc -> + -> 52 `i -> 16 `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 0 `i `ui ]
+"330
+[e ( _fillRect (4 , , , , -> + - -> 15 `i -> 1 `i -> _xinc `i `uc -> + -> 52 `i -> 16 `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 2047 `i `ui ]
+"331
+[e $U 499  ]
+"333
+[e :U 503 ]
+"334
+[e ( _fillRect (4 , , , , -> - -> 15 `i -> 1 `i `uc -> + -> 52 `i -> 16 `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 0 `i `ui ]
+"335
+[e ( _fillRect (4 , , , , -> - -> 15 `i -> 1 `i `uc -> + + -> 52 `i -> 16 `i -> _yinc `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 0 `i `ui ]
+"336
+[e ( _fillRect (4 , , , , -> + - -> 15 `i -> 1 `i * -> 2 `i -> _xinc `i `uc -> + -> 52 `i -> 16 `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 2047 `i `ui ]
+"337
+[e $U 499  ]
+"339
+[e :U 504 ]
+"340
+[e ( _fillRect (4 , , , , -> + - -> 15 `i -> 1 `i -> _xinc `i `uc -> + + -> 52 `i -> 16 `i -> _yinc `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 0 `i `ui ]
+"341
+[e ( _fillRect (4 , , , , -> - -> 15 `i -> 1 `i `uc -> + + -> 52 `i -> 16 `i -> _yinc `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 2047 `i `ui ]
+"342
+[e $U 499  ]
+"344
+[e :U 505 ]
+"345
+[e ( _fillRect (4 , , , , -> + - -> 15 `i -> 1 `i * -> 2 `i -> _xinc `i `uc -> + + -> 52 `i -> 16 `i -> _yinc `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 0 `i `ui ]
+"346
+[e ( _fillRect (4 , , , , -> + - -> 15 `i -> 1 `i -> _xinc `i `uc -> + + -> 52 `i -> 16 `i -> _yinc `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 2047 `i `ui ]
+"347
+[e $U 499  ]
+"349
+[e :U 506 ]
+"350
+[e ( _fillRect (4 , , , , -> - -> 15 `i -> 1 `i `uc -> + -> 52 `i -> 16 `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 0 `i `ui ]
+"351
+[e ( _fillRect (4 , , , , -> + - -> 15 `i -> 1 `i * -> 2 `i -> _xinc `i `uc -> + + -> 52 `i -> 16 `i -> _yinc `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 2047 `i `ui ]
+"352
+[e $U 499  ]
+"353
+}
+[e $U 499  ]
+"321
+[e :U 500 ]
+[e [\ _field , $ -> -> 0 `i `uc 501
+ , $ -> -> 1 `i `uc 502
+ , $ -> -> 2 `i `uc 503
+ , $ -> -> 3 `i `uc 504
+ , $ -> -> 4 `i `uc 505
+ , $ -> -> 5 `i `uc 506
+ 499 ]
+"353
+[e :U 499 ]
+"354
+[e :UE 498 ]
+}
+[a 4C 68 97 116 101 0 ]
+[a 3C 84 105 109 101 0 ]
+[a 2C 84 105 109 101 32 83 101 116 117 112 0 0 ]
+[a 1C 69 67 69 51 51 48 49 76 32 83 112 50 49 32 70 105 110 97 108 0 0 ]

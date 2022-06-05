@@ -1,0 +1,752 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"388 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\doprnt.c
+[v __npowers_ `Cd ~T0 @X0 -> 0 `x e ]
+[v __powers_ `Cd ~T0 @X0 -> 0 `x e ]
+"10 C:\Program Files (x86)\Microchip\xc8\v1.34\include\stdarg.h
+[v ___va_start `(*v ~T0 @X0 0 ef ]
+[p i ___va_start ]
+"24 C:\Program Files (x86)\Microchip\xc8\v1.34\include\conio.h
+[v _putch `(v ~T0 @X0 0 ef1`uc ]
+"7 C:\Program Files (x86)\Microchip\xc8\v1.34\include\ctype.h
+[v _isdigit `(b ~T0 @X0 0 ef1`uc ]
+"13 C:\Program Files (x86)\Microchip\xc8\v1.34\include\stdarg.h
+[v ___va_arg `(*v ~T0 @X0 0 ev`*v ]
+[p i ___va_arg ]
+"394 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\doprnt.c
+[v __tdiv_to_l_ `(ul ~T0 @X0 0 ef2`f`f ]
+"392
+[v __div_to_l_ `(ul ~T0 @X0 0 ef2`d`d ]
+"13 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\doprnt.c
+[p n 350 ]
+"354
+[v _dpowers `Cul ~T0 @X0 -> 0 `x s ]
+[i _dpowers
+:U ..
+-> -> -> 1 `i `l `ul
+-> -> -> 10 `i `l `ul
+-> -> -> 100 `i `l `ul
+-> -> -> 1000 `i `l `ul
+-> -> -> 10000 `i `l `ul
+"356
+-> -> 100000 `l `ul
+-> -> 1000000 `l `ul
+-> -> 10000000 `l `ul
+-> -> 100000000 `l `ul
+"359
+-> -> 1000000000 `l `ul
+..
+]
+"362
+[v _hexpowers `Cul ~T0 @X0 -> 0 `x s ]
+[i _hexpowers
+:U ..
+-> -> -> 1 `i `l `ul
+-> -> -> 16 `i `l `ul
+-> -> -> 256 `i `l `ul
+-> -> -> 4096 `i `l `ul
+"364
+-> -> 65536 `l `ul
+-> -> 1048576 `l `ul
+-> -> 16777216 `l `ul
+"366
+-> -> 268435456 `l `ul
+..
+]
+"409
+[v _fround `(d ~T0 @X0 1 sf1`uc ]
+"410
+{
+[e :U _fround ]
+"409
+[v _prec `uc ~T0 @X0 1 r1 ]
+"410
+[f ]
+"413
+[e $ ! >= -> _prec `i -> 110 `i 7  ]
+"414
+[e ) * * * .0.5 *U + &U __npowers_ * -> -> + / -> _prec `i -> 100 `i -> 18 `i `ui `ux -> -> # *U &U __npowers_ `ui `ux *U + &U __npowers_ * -> -> + / % -> _prec `i -> 100 `i -> 10 `i -> 9 `i `ui `ux -> -> # *U &U __npowers_ `ui `ux *U + &U __npowers_ * -> -> % -> _prec `i -> 10 `i `ui `ux -> -> # *U &U __npowers_ `ui `ux ]
+[e $UE 6  ]
+[e $U 8  ]
+"415
+[e :U 7 ]
+[e $ ! > -> _prec `i -> 10 `i 9  ]
+"416
+[e ) * * .0.5 *U + &U __npowers_ * -> -> + / -> _prec `i -> 10 `i -> 9 `i `ui `ux -> -> # *U &U __npowers_ `ui `ux *U + &U __npowers_ * -> -> % -> _prec `i -> 10 `i `ui `ux -> -> # *U &U __npowers_ `ui `ux ]
+[e $UE 6  ]
+[e :U 9 ]
+"417
+[e :U 8 ]
+[e ) * .0.5 *U + &U __npowers_ * -> _prec `ux -> -> # *U &U __npowers_ `ui `ux ]
+[e $UE 6  ]
+"418
+[e :UE 6 ]
+}
+"425
+[v _scale `(d ~T0 @X0 1 sf1`c ]
+"426
+{
+[e :U _scale ]
+"425
+[v _scl `c ~T0 @X0 1 r1 ]
+"426
+[f ]
+"428
+[e $ ! < -> _scl `i -> 0 `i 11  ]
+{
+"429
+[e = _scl -> -U -> _scl `i `c ]
+"430
+[e $ ! >= -> _scl `i -> 110 `i 12  ]
+"431
+[e ) * * *U + &U __npowers_ * -> -> + / -> _scl `i -> 100 `i -> 18 `i `ui `ux -> -> # *U &U __npowers_ `ui `ux *U + &U __npowers_ * -> -> + / % -> _scl `i -> 100 `i -> 10 `i -> 9 `i `ui `ux -> -> # *U &U __npowers_ `ui `ux *U + &U __npowers_ * -> -> % -> _scl `i -> 10 `i `ui `ux -> -> # *U &U __npowers_ `ui `ux ]
+[e $UE 10  ]
+[e $U 13  ]
+"432
+[e :U 12 ]
+[e $ ! > -> _scl `i -> 10 `i 14  ]
+"433
+[e ) * *U + &U __npowers_ * -> -> + / -> _scl `i -> 10 `i -> 9 `i `ui `ux -> -> # *U &U __npowers_ `ui `ux *U + &U __npowers_ * -> -> % -> _scl `i -> 10 `i `ui `ux -> -> # *U &U __npowers_ `ui `ux ]
+[e $UE 10  ]
+[e :U 14 ]
+"434
+[e :U 13 ]
+[e ) *U + &U __npowers_ * -> -> _scl `uc `ux -> -> # *U &U __npowers_ `ui `ux ]
+[e $UE 10  ]
+"435
+}
+[e :U 11 ]
+"436
+[e $ ! >= -> _scl `i -> 110 `i 15  ]
+"437
+[e ) * * *U + &U __powers_ * -> -> + / -> _scl `i -> 100 `i -> 18 `i `ui `ux -> -> # *U &U __powers_ `ui `ux *U + &U __powers_ * -> -> + / % -> _scl `i -> 100 `i -> 10 `i -> 9 `i `ui `ux -> -> # *U &U __powers_ `ui `ux *U + &U __powers_ * -> -> % -> _scl `i -> 10 `i `ui `ux -> -> # *U &U __powers_ `ui `ux ]
+[e $UE 10  ]
+[e $U 16  ]
+"438
+[e :U 15 ]
+[e $ ! > -> _scl `i -> 10 `i 17  ]
+"439
+[e ) * *U + &U __powers_ * -> -> + / -> _scl `i -> 10 `i -> 9 `i `ui `ux -> -> # *U &U __powers_ `ui `ux *U + &U __powers_ * -> -> % -> _scl `i -> 10 `i `ui `ux -> -> # *U &U __powers_ `ui `ux ]
+[e $UE 10  ]
+[e :U 17 ]
+"440
+[e :U 16 ]
+[e ) *U + &U __powers_ * -> -> _scl `uc `ux -> -> # *U &U __powers_ `ui `ux ]
+[e $UE 10  ]
+"441
+[e :UE 10 ]
+}
+"464
+[v _printf `(i ~T0 @X0 1 ev`*Cuc ]
+"465
+{
+[e :U _printf ]
+"464
+[v _f `*Cuc ~T0 @X0 1 r0 ]
+"465
+[f ]
+"466
+[v _ap `*v ~T0 @X0 -> -> 1 `i `ux a ]
+"499
+[v _c `c ~T0 @X0 1 a ]
+"501
+[v _width `i ~T0 @X0 1 a ]
+"504
+[v _prec `i ~T0 @X0 1 a ]
+"508
+[v _flag `us ~T0 @X0 1 a ]
+"515
+[v _d `uc ~T0 @X0 1 a ]
+"516
+[v _fval `d ~T0 @X0 1 a ]
+[v _exp `i ~T0 @X0 1 a ]
+"523
+[u S18 `ul 1 `d 1 ]
+[n S18 . vd integ ]
+"526
+[v _tmpval `S18 ~T0 @X0 1 a ]
+"528
+[v _val `ul ~T0 @X0 1 a ]
+"529
+[v _len `ui ~T0 @X0 1 a ]
+"530
+[v _cp `*Cuc ~T0 @X0 1 a ]
+"533
+[e = *U &U _ap ( ___va_start ..  ]
+"536
+[e $U 20  ]
+[e :U 21 ]
+{
+"538
+[e $ ! != -> -> _c `i `ui -> 37 `ui 23  ]
+"540
+{
+"541
+[e ( _putch (1 -> _c `uc ]
+"542
+[e $U 20  ]
+"543
+}
+[e :U 23 ]
+"546
+[e = _width -> 0 `i ]
+"548
+[e = _flag -> -> 0 `i `us ]
+"550
+{
+[e :U 24 ]
+{
+"551
+[e $U 28  ]
+{
+"579
+[e :U 29 ]
+"580
+[e =| _flag -> -> 4 `i `us ]
+"581
+[e ++ _f * -> -> 1 `i `x -> -> # *U _f `i `x ]
+"582
+[e $U 26  ]
+"584
+}
+[e $U 27  ]
+"551
+[e :U 28 ]
+[e [\ *U _f , $ -> -> 48 `ui `uc 29
+ 27 ]
+"584
+[e :U 27 ]
+"585
+[e $U 25  ]
+"586
+}
+[e :U 26 ]
+[e $U 24  ]
+[e :U 25 ]
+}
+"597
+[e $ ! ( _isdigit (1 -> -> *U _f `ui `uc 30  ]
+{
+"598
+[e = _width -> 0 `i ]
+"599
+[e :U 33 ]
+{
+"600
+[e =* _width -> 10 `i ]
+"601
+[e =+ _width -> - -> *U ++ _f * -> -> 1 `i `x -> -> # *U _f `i `x `ui -> 48 `ui `i ]
+"602
+}
+[e $ ( _isdigit (1 -> -> *U _f `ui `uc 33  ]
+[e :U 32 ]
+"608
+}
+[e :U 30 ]
+"635
+[e $U 35  ]
+{
+"637
+[e :U 36 ]
+"638
+[e $U 37  ]
+"662
+[e :U 38 ]
+"663
+[e =| _flag -> -> 1024 `i `us ]
+"664
+[e $U 34  ]
+"697
+[e :U 39 ]
+"698
+[e :U 40 ]
+"699
+[e $U 34  ]
+"718
+[e :U 41 ]
+"721
+[e =| _flag -> -> 128 `i `us ]
+"723
+[e $U 34  ]
+"802
+[e :U 42 ]
+"813
+[e $U 20  ]
+"822
+}
+[e $U 34  ]
+"635
+[e :U 35 ]
+[e [\ = _c -> *U ++ _f * -> -> 1 `i `x -> -> # *U _f `i `x `c , $ -> -> 0 `i `c 36
+ , $ -> -> 102 `ui `c 38
+ , $ -> -> 100 `ui `c 39
+ , $ -> -> 105 `ui `c 40
+ , $ -> -> 120 `ui `c 41
+ 42 ]
+"822
+[e :U 34 ]
+"825
+[e $ ! != & -> _flag `ui -> -> 1792 `i `ui -> -> 0 `i `ui 43  ]
+{
+"829
+[e = _prec -> 6 `i ]
+"830
+[e = _fval *U -> ( ___va_arg , (. -> *U -> &U _ap `**d `*v -> -> 0 `i `d `*d ]
+"831
+[e $ ! < _fval .0.0 44  ]
+{
+"832
+[e = _fval -U _fval ]
+"833
+[e =| _flag -> -> 3 `i `us ]
+"834
+}
+[e :U 44 ]
+"835
+[e = _exp -> 0 `i ]
+"836
+[e $ ! != _fval -> -> 0 `i `d 45  ]
+{
+"837
+[e = *U &U _exp -> - & >> *U -> &U _fval `*ul -> 15 `i -> -> -> 255 `i `l `ul -> -> -> 126 `i `l `ul `i ]
+"838
+[e -- _exp -> 1 `i ]
+"839
+[e =* _exp -> 3 `i ]
+"840
+[e =/ _exp -> -> 10 `uc `i ]
+"841
+[e $ ! < _exp -> 0 `i 46  ]
+"842
+[e -- _exp -> 1 `i ]
+[e :U 46 ]
+"846
+[e = . _tmpval 1 ( _scale (1 -> -U _exp `c ]
+"847
+[e =* . _tmpval 1 _fval ]
+"848
+[e $ ! < . _tmpval 1 .1.0 47  ]
+"849
+[e -- _exp -> 1 `i ]
+[e $U 48  ]
+"850
+[e :U 47 ]
+[e $ ! >= . _tmpval 1 .10.0 49  ]
+"851
+[e ++ _exp -> 1 `i ]
+[e :U 49 ]
+"852
+[e :U 48 ]
+}
+[e :U 45 ]
+"1112
+[e $ ! <= _prec -> 12 `i 50  ]
+"1113
+[e =+ _fval ( _fround (1 -> _prec `uc ]
+[e :U 50 ]
+"1116
+[e $ ! || > _exp -> 9 `i && && != _fval -> -> 0 `i `d == -> _fval `ul -> -> -> 0 `i `l `ul > _exp -> 1 `i 51  ]
+{
+"1120
+[e $ ! < . _tmpval 1 .4.294967296 52  ]
+{
+"1121
+[e =- _exp -> - / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui -> -> 1 `i `ui `i ]
+"1122
+}
+[e $U 53  ]
+[e :U 52 ]
+{
+"1123
+[e =- _exp -> - / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui -> -> 2 `i `ui `i ]
+"1124
+}
+[e :U 53 ]
+"1125
+[e = . _tmpval 1 ( _scale (1 -> _exp `c ]
+"1126
+[e = _val ? == -> # `d `ui -> -> 3 `i `ui : ( __tdiv_to_l_ (2 , -> _fval `f -> . _tmpval 1 `f ( __div_to_l_ (2 , _fval . _tmpval 1 ]
+"1129
+[e = _fval .0.0 ]
+"1130
+}
+[e $U 54  ]
+[e :U 51 ]
+{
+"1131
+[e = _val -> _fval `ul ]
+"1132
+[e =- _fval -> _val `d ]
+"1133
+[e = _exp -> 0 `i ]
+"1134
+}
+[e :U 54 ]
+"1136
+{
+[e = _c -> -> 1 `i `c ]
+[e $ != -> -> _c `i `ui / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui 55  ]
+[e $U 56  ]
+"1137
+[e :U 55 ]
+[e $ ! < _val *U + &U _dpowers * -> -> _c `uc `ux -> -> # *U &U _dpowers `ui `ux 58  ]
+"1138
+[e $U 56  ]
+[e :U 58 ]
+"1136
+[e ++ _c -> -> 1 `i `c ]
+[e $ != -> -> _c `i `ui / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui 55  ]
+[e :U 56 ]
+"1142
+}
+[e =- _width + + _prec -> _c `i _exp ]
+"1147
+[e $ ! != _prec -> 0 `i 59  ]
+"1148
+[e -- _width -> 1 `i ]
+[e :U 59 ]
+"1149
+[e $ ! != & -> _flag `ui -> -> 3 `i `ui -> -> 0 `i `ui 60  ]
+"1150
+[e -- _width -> 1 `i ]
+[e :U 60 ]
+"1153
+[e $ ! != & -> _flag `ui -> -> 4 `i `ui -> -> 0 `i `ui 61  ]
+{
+"1157
+[e $ ! != & -> _flag `ui -> -> 3 `i `ui -> -> 0 `i `ui 62  ]
+"1159
+[e ( _putch (1 -> -> 45 `ui `uc ]
+[e :U 62 ]
+"1168
+[e $U 63  ]
+[e :U 64 ]
+{
+"1169
+[e ( _putch (1 -> -> 48 `ui `uc ]
+"1170
+[e -- _width -> 1 `i ]
+"1171
+}
+[e :U 63 ]
+"1168
+[e $ > _width -> 0 `i 64  ]
+[e :U 65 ]
+"1173
+}
+[e $U 66  ]
+[e :U 61 ]
+"1175
+{
+"1180
+[e $U 67  ]
+[e :U 68 ]
+{
+"1181
+[e ( _putch (1 -> -> 32 `ui `uc ]
+"1182
+[e -- _width -> 1 `i ]
+"1183
+}
+[e :U 67 ]
+"1180
+[e $ > _width -> 0 `i 68  ]
+[e :U 69 ]
+"1188
+[e $ ! != & -> _flag `ui -> -> 3 `i `ui -> -> 0 `i `ui 70  ]
+"1190
+[e ( _putch (1 -> -> 45 `ui `uc ]
+[e :U 70 ]
+"1195
+}
+[e :U 66 ]
+"1196
+[e $U 71  ]
+[e :U 72 ]
+{
+"1200
+{
+"1201
+[e = . _tmpval 0 / _val *U + &U _dpowers * -> -> _c `uc `ux -> -> # *U &U _dpowers `ui `ux ]
+"1202
+[e =% . _tmpval 0 -> -> 10 `uc `ul ]
+"1203
+[e ( _putch (1 -> + -> -> 48 `ui `ul . _tmpval 0 `uc ]
+"1204
+}
+"1206
+}
+[e :U 71 ]
+"1196
+[e $ != -> -- _c -> -> 1 `i `c `i -> -> -> 0 `i `c `i 72  ]
+[e :U 73 ]
+"1207
+[e $U 74  ]
+[e :U 75 ]
+{
+"1208
+[e ( _putch (1 -> -> 48 `ui `uc ]
+"1209
+[e -- _exp -> 1 `i ]
+"1210
+}
+[e :U 74 ]
+"1207
+[e $ > _exp -> 0 `i 75  ]
+[e :U 76 ]
+"1211
+[e $ ! > _prec -> - / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui -> -> 2 `i `ui `i 77  ]
+"1212
+[e = _c -> - / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui -> -> 2 `i `ui `c ]
+[e $U 78  ]
+"1213
+[e :U 77 ]
+"1214
+[e = _c -> _prec `c ]
+[e :U 78 ]
+"1215
+[e =- _prec -> _c `i ]
+"1219
+[e $ ! != -> _c `i -> -> -> 0 `i `c `i 79  ]
+"1221
+[e ( _putch (1 -> -> 46 `ui `uc ]
+[e :U 79 ]
+"1227
+[e = _val -> -> * _fval ( _scale (1 _c `l `ul ]
+"1228
+[e $U 80  ]
+[e :U 81 ]
+{
+"1229
+[e = . _tmpval 0 / _val *U + &U _dpowers * -> -> _c `uc `ux -> -> # *U &U _dpowers `ui `ux ]
+"1230
+[e =% . _tmpval 0 -> -> 10 `uc `ul ]
+"1231
+[e ( _putch (1 -> + -> -> 48 `ui `ul . _tmpval 0 `uc ]
+"1232
+[e =% _val *U + &U _dpowers * -> -> _c `uc `ux -> -> # *U &U _dpowers `ui `ux ]
+"1233
+}
+[e :U 80 ]
+"1228
+[e $ != -> -- _c -> -> 1 `i `c `i -> -> -> 0 `i `c `i 81  ]
+[e :U 82 ]
+"1235
+[e $U 83  ]
+[e :U 84 ]
+{
+"1236
+[e ( _putch (1 -> -> 48 `ui `uc ]
+"1237
+[e -- _prec -> 1 `i ]
+"1238
+}
+[e :U 83 ]
+"1235
+[e $ != _prec -> 0 `i 84  ]
+[e :U 85 ]
+"1245
+[e $U 20  ]
+"1246
+}
+[e :U 43 ]
+"1251
+[e $ ! == & -> _flag `ui -> -> 128 `i `ui -> -> 0 `i `ui 86  ]
+"1253
+{
+"1259
+[e = _val -> -> *U -> ( ___va_arg , (. -> *U -> &U _ap `**i `*v -> 0 `i `*i `l `ul ]
+"1261
+[e $ ! < -> _val `l -> -> 0 `i `l 87  ]
+{
+"1262
+[e =| _flag -> -> 3 `i `us ]
+"1263
+[e = _val -U _val ]
+"1264
+}
+[e :U 87 ]
+"1266
+}
+[e $U 88  ]
+"1268
+[e :U 86 ]
+"1273
+{
+"1286
+[e = _val -> *U -> ( ___va_arg , (. -> *U -> &U _ap `**ui `*v -> -> 0 `i `ui `*ui `ul ]
+"1287
+}
+[e :U 88 ]
+"1294
+[e $U 90  ]
+{
+"1299
+[e :U 91 ]
+"1305
+{
+[e = _c -> -> 1 `i `c ]
+[e $ != -> -> _c `i `ui / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui 92  ]
+[e $U 93  ]
+"1306
+[e :U 92 ]
+[e $ ! < _val *U + &U _dpowers * -> -> _c `uc `ux -> -> # *U &U _dpowers `ui `ux 95  ]
+"1307
+[e $U 93  ]
+[e :U 95 ]
+"1305
+[e ++ _c -> -> 1 `i `c ]
+[e $ != -> -> _c `i `ui / -> # _dpowers `ui -> # *U + &U _dpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _dpowers `ui `ux `ui 92  ]
+[e :U 93 ]
+"1309
+}
+[e $U 89  ]
+"1314
+[e :U 96 ]
+"1316
+{
+[e = _c -> -> 1 `i `c ]
+[e $ != -> -> _c `i `ui / -> # _hexpowers `ui -> # *U + &U _hexpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _hexpowers `ui `ux `ui 97  ]
+[e $U 98  ]
+"1317
+[e :U 97 ]
+[e $ ! < _val *U + &U _hexpowers * -> -> _c `uc `ux -> -> # *U &U _hexpowers `ui `ux 100  ]
+"1318
+[e $U 98  ]
+[e :U 100 ]
+"1316
+[e ++ _c -> -> 1 `i `c ]
+[e $ != -> -> _c `i `ui / -> # _hexpowers `ui -> # *U + &U _hexpowers * -> -> -> 0 `i `ui `ux -> -> # *U &U _hexpowers `ui `ux `ui 97  ]
+[e :U 98 ]
+"1320
+}
+[e $U 89  ]
+"1336
+}
+[e $U 89  ]
+"1294
+[e :U 90 ]
+[e [\ -> & -> _flag `ui -> -> 128 `i `ui `uc , $ -> -> 0 `i `uc 91
+ , $ -> -> 128 `i `uc 96
+ 89 ]
+"1336
+[e :U 89 ]
+"1345
+[e $ ! && != _width -> 0 `i != & -> _flag `ui -> -> 3 `i `ui -> -> 0 `i `ui 101  ]
+"1346
+[e -- _width -> 1 `i ]
+[e :U 101 ]
+"1381
+[e $ ! > _width -> _c `i 102  ]
+"1382
+[e =- _width -> _c `i ]
+[e $U 103  ]
+"1383
+[e :U 102 ]
+"1384
+[e = _width -> 0 `i ]
+[e :U 103 ]
+"1387
+[e $ ! != & -> _flag `ui -> -> 4 `i `ui -> -> 0 `i `ui 104  ]
+{
+"1392
+[e $ ! != & -> _flag `ui -> -> 3 `i `ui -> -> 0 `i `ui 105  ]
+"1393
+[e ( _putch (1 -> -> 45 `ui `uc ]
+[e :U 105 ]
+"1415
+[e $ ! != _width -> 0 `i 106  ]
+"1416
+[e :U 109 ]
+"1417
+[e ( _putch (1 -> -> 48 `ui `uc ]
+"1418
+[e $ != =- _width -> 1 `i -> 0 `i 109  ]
+[e :U 108 ]
+[e :U 106 ]
+"1420
+}
+[e $U 110  ]
+[e :U 104 ]
+"1422
+{
+"1428
+[e $ ! != _width -> 0 `i 111  ]
+"1429
+[e :U 114 ]
+"1430
+[e ( _putch (1 -> -> 32 `ui `uc ]
+"1431
+[e $ != =- _width -> 1 `i -> 0 `i 114  ]
+[e :U 113 ]
+[e :U 111 ]
+"1438
+[e $ ! != & -> _flag `ui -> -> 3 `i `ui -> -> 0 `i `ui 115  ]
+"1439
+[e ( _putch (1 -> -> 45 `ui `uc ]
+[e :U 115 ]
+"1469
+}
+[e :U 110 ]
+"1472
+[e = _prec -> _c `i ]
+"1474
+[e $U 116  ]
+[e :U 117 ]
+{
+"1476
+[e $U 120  ]
+"1478
+{
+"1483
+[e :U 121 ]
+"1489
+[e = _c -> + % / _val *U + &U _dpowers * -> -> _prec `ui `ux -> -> # *U &U _dpowers `ui `ux -> -> -> 10 `i `l `ul -> -> 48 `ui `ul `c ]
+"1491
+[e $U 119  ]
+"1497
+[e :U 122 ]
+"1499
+{
+"1500
+[v _idx `uc ~T0 @X0 1 a ]
+[e = _idx -> & / _val *U + &U _hexpowers * -> -> _prec `ui `ux -> -> # *U &U _hexpowers `ui `ux -> -> -> 15 `i `l `ul `uc ]
+"1506
+[e = _c -> *U + :s 1C * -> _idx `ux -> -> # *U :s 1C `ui `ux `c ]
+"1508
+}
+"1510
+[e $U 119  ]
+"1523
+}
+[e $U 119  ]
+"1476
+[e :U 120 ]
+[e [\ -> & -> _flag `ui -> -> 128 `i `ui `uc , $ -> -> 0 `i `uc 121
+ , $ -> -> 128 `i `uc 122
+ 119 ]
+"1523
+[e :U 119 ]
+"1524
+[e ( _putch (1 -> _c `uc ]
+"1525
+}
+[e :U 116 ]
+"1474
+[e $ != -- _prec -> 1 `i -> 0 `i 117  ]
+[e :U 118 ]
+"1533
+}
+[e :U 20 ]
+"536
+[e $ != -> = _c -> *U ++ _f * -> -> 1 `i `x -> -> # *U _f `i `x `c `i -> -> -> 0 `i `c `i 21  ]
+[e :U 22 ]
+"1535
+[e :U 37 ]
+"1540
+[e ) -> 0 `i ]
+[e $UE 19  ]
+"1541
+[e :UE 19 ]
+}
+[a 1C 48 49 50 51 52 53 54 55 56 57 97 98 99 100 101 102 0 ]
+

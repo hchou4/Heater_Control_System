@@ -1,0 +1,787 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"9 I2C.h
+[v _I2C_Write_Cmd_Write_Data `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"8
+[v _I2C_Write_Cmd_Only `(v ~T0 @X0 0 ef2`uc`uc ]
+"3
+[v _I2C_Start `(v ~T0 @X0 0 ef ]
+"7
+[v _I2C_Write `(v ~T0 @X0 0 ef1`uc ]
+"4
+[v _I2C_ReStart `(v ~T0 @X0 0 ef ]
+"6
+[v _I2C_Read `(uc ~T0 @X0 0 ef1`uc ]
+"5
+[v _I2C_Stop `(v ~T0 @X0 0 ef ]
+"16 I2C_Support.c
+[v _second `uc ~T0 @X0 0 e ]
+[v _minute `uc ~T0 @X0 0 e ]
+[v _hour `uc ~T0 @X0 0 e ]
+[v _dow `uc ~T0 @X0 0 e ]
+[v _day `uc ~T0 @X0 0 e ]
+[v _month `uc ~T0 @X0 0 e ]
+[v _year `uc ~T0 @X0 0 e ]
+"3 utils.h
+[v _dec_2_bcd `(i ~T0 @X0 0 ef1`uc ]
+"17 I2C_Support.c
+[v _setup_second `uc ~T0 @X0 0 e ]
+[v _setup_minute `uc ~T0 @X0 0 e ]
+[v _setup_hour `uc ~T0 @X0 0 e ]
+[v _setup_day `uc ~T0 @X0 0 e ]
+[v _setup_month `uc ~T0 @X0 0 e ]
+[v _setup_year `uc ~T0 @X0 0 e ]
+"18
+[v _alarm_date `uc ~T0 @X0 0 e ]
+[v _alarm_hour `uc ~T0 @X0 0 e ]
+[v _alarm_minute `uc ~T0 @X0 0 e ]
+[v _alarm_second `uc ~T0 @X0 0 e ]
+"11 I2C.h
+[v _I2C_Write_Address_Read_One_Byte `(uc ~T0 @X0 0 ef2`uc`uc ]
+"10
+[v _I2C_Write_Address_Write_One_Byte `(v ~T0 @X0 0 ef3`uc`uc`uc ]
+"19 I2C_Support.c
+[v _setup_alarm_hour `uc ~T0 @X0 0 e ]
+[v _setup_alarm_minute `uc ~T0 @X0 0 e ]
+[v _setup_alarm_second `uc ~T0 @X0 0 e ]
+"51 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4620.h
+[; <" PORTA equ 0F80h ;# ">
+"189
+[; <" PORTB equ 0F81h ;# ">
+"359
+[; <" PORTC equ 0F82h ;# ">
+"536
+[; <" PORTD equ 0F83h ;# ">
+"677
+[; <" PORTE equ 0F84h ;# ">
+"1005
+[; <" LATA equ 0F89h ;# ">
+"1137
+[; <" LATB equ 0F8Ah ;# ">
+"1269
+[; <" LATC equ 0F8Bh ;# ">
+"1401
+[; <" LATD equ 0F8Ch ;# ">
+"1533
+[; <" LATE equ 0F8Dh ;# ">
+"1635
+[; <" TRISA equ 0F92h ;# ">
+"1640
+[; <" DDRA equ 0F92h ;# ">
+"1856
+[; <" TRISB equ 0F93h ;# ">
+"1861
+[; <" DDRB equ 0F93h ;# ">
+"2077
+[; <" TRISC equ 0F94h ;# ">
+"2082
+[; <" DDRC equ 0F94h ;# ">
+"2298
+[; <" TRISD equ 0F95h ;# ">
+"2303
+[; <" DDRD equ 0F95h ;# ">
+"2519
+[; <" TRISE equ 0F96h ;# ">
+"2524
+[; <" DDRE equ 0F96h ;# ">
+"2682
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"2746
+[; <" PIE1 equ 0F9Dh ;# ">
+"2825
+[; <" PIR1 equ 0F9Eh ;# ">
+"2904
+[; <" IPR1 equ 0F9Fh ;# ">
+"2983
+[; <" PIE2 equ 0FA0h ;# ">
+"3048
+[; <" PIR2 equ 0FA1h ;# ">
+"3113
+[; <" IPR2 equ 0FA2h ;# ">
+"3178
+[; <" EECON1 equ 0FA6h ;# ">
+"3243
+[; <" EECON2 equ 0FA7h ;# ">
+"3249
+[; <" EEDATA equ 0FA8h ;# ">
+"3255
+[; <" EEADR equ 0FA9h ;# ">
+"3261
+[; <" EEADRH equ 0FAAh ;# ">
+"3267
+[; <" RCSTA equ 0FABh ;# ">
+"3272
+[; <" RCSTA1 equ 0FABh ;# ">
+"3476
+[; <" TXSTA equ 0FACh ;# ">
+"3481
+[; <" TXSTA1 equ 0FACh ;# ">
+"3773
+[; <" TXREG equ 0FADh ;# ">
+"3778
+[; <" TXREG1 equ 0FADh ;# ">
+"3784
+[; <" RCREG equ 0FAEh ;# ">
+"3789
+[; <" RCREG1 equ 0FAEh ;# ">
+"3795
+[; <" SPBRG equ 0FAFh ;# ">
+"3800
+[; <" SPBRG1 equ 0FAFh ;# ">
+"3806
+[; <" SPBRGH equ 0FB0h ;# ">
+"3812
+[; <" T3CON equ 0FB1h ;# ">
+"3925
+[; <" TMR3 equ 0FB2h ;# ">
+"3931
+[; <" TMR3L equ 0FB2h ;# ">
+"3937
+[; <" TMR3H equ 0FB3h ;# ">
+"3943
+[; <" CMCON equ 0FB4h ;# ">
+"4038
+[; <" CVRCON equ 0FB5h ;# ">
+"4116
+[; <" ECCP1AS equ 0FB6h ;# ">
+"4197
+[; <" PWM1CON equ 0FB7h ;# ">
+"4266
+[; <" BAUDCON equ 0FB8h ;# ">
+"4271
+[; <" BAUDCTL equ 0FB8h ;# ">
+"4437
+[; <" CCP2CON equ 0FBAh ;# ">
+"4515
+[; <" CCPR2 equ 0FBBh ;# ">
+"4521
+[; <" CCPR2L equ 0FBBh ;# ">
+"4527
+[; <" CCPR2H equ 0FBCh ;# ">
+"4533
+[; <" CCP1CON equ 0FBDh ;# ">
+"4629
+[; <" CCPR1 equ 0FBEh ;# ">
+"4635
+[; <" CCPR1L equ 0FBEh ;# ">
+"4641
+[; <" CCPR1H equ 0FBFh ;# ">
+"4647
+[; <" ADCON2 equ 0FC0h ;# ">
+"4717
+[; <" ADCON1 equ 0FC1h ;# ">
+"4807
+[; <" ADCON0 equ 0FC2h ;# ">
+"4929
+[; <" ADRES equ 0FC3h ;# ">
+"4935
+[; <" ADRESL equ 0FC3h ;# ">
+"4941
+[; <" ADRESH equ 0FC4h ;# ">
+"4947
+[; <" SSPCON2 equ 0FC5h ;# ">
+"5008
+[; <" SSPCON1 equ 0FC6h ;# ">
+"5077
+[; <" SSPSTAT equ 0FC7h ;# ">
+"5316
+[; <" SSPADD equ 0FC8h ;# ">
+"5322
+[; <" SSPBUF equ 0FC9h ;# ">
+"5328
+[; <" T2CON equ 0FCAh ;# ">
+"5398
+[; <" PR2 equ 0FCBh ;# ">
+"5403
+[; <" MEMCON equ 0FCBh ;# ">
+"5507
+[; <" TMR2 equ 0FCCh ;# ">
+"5513
+[; <" T1CON equ 0FCDh ;# ">
+"5617
+[; <" TMR1 equ 0FCEh ;# ">
+"5623
+[; <" TMR1L equ 0FCEh ;# ">
+"5629
+[; <" TMR1H equ 0FCFh ;# ">
+"5635
+[; <" RCON equ 0FD0h ;# ">
+"5767
+[; <" WDTCON equ 0FD1h ;# ">
+"5794
+[; <" HLVDCON equ 0FD2h ;# ">
+"5799
+[; <" LVDCON equ 0FD2h ;# ">
+"6063
+[; <" OSCCON equ 0FD3h ;# ">
+"6139
+[; <" T0CON equ 0FD5h ;# ">
+"6215
+[; <" TMR0 equ 0FD6h ;# ">
+"6221
+[; <" TMR0L equ 0FD6h ;# ">
+"6227
+[; <" TMR0H equ 0FD7h ;# ">
+"6233
+[; <" STATUS equ 0FD8h ;# ">
+"6311
+[; <" FSR2 equ 0FD9h ;# ">
+"6317
+[; <" FSR2L equ 0FD9h ;# ">
+"6323
+[; <" FSR2H equ 0FDAh ;# ">
+"6329
+[; <" PLUSW2 equ 0FDBh ;# ">
+"6335
+[; <" PREINC2 equ 0FDCh ;# ">
+"6341
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"6347
+[; <" POSTINC2 equ 0FDEh ;# ">
+"6353
+[; <" INDF2 equ 0FDFh ;# ">
+"6359
+[; <" BSR equ 0FE0h ;# ">
+"6365
+[; <" FSR1 equ 0FE1h ;# ">
+"6371
+[; <" FSR1L equ 0FE1h ;# ">
+"6377
+[; <" FSR1H equ 0FE2h ;# ">
+"6383
+[; <" PLUSW1 equ 0FE3h ;# ">
+"6389
+[; <" PREINC1 equ 0FE4h ;# ">
+"6395
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"6401
+[; <" POSTINC1 equ 0FE6h ;# ">
+"6407
+[; <" INDF1 equ 0FE7h ;# ">
+"6413
+[; <" WREG equ 0FE8h ;# ">
+"6424
+[; <" FSR0 equ 0FE9h ;# ">
+"6430
+[; <" FSR0L equ 0FE9h ;# ">
+"6436
+[; <" FSR0H equ 0FEAh ;# ">
+"6442
+[; <" PLUSW0 equ 0FEBh ;# ">
+"6448
+[; <" PREINC0 equ 0FECh ;# ">
+"6454
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"6460
+[; <" POSTINC0 equ 0FEEh ;# ">
+"6466
+[; <" INDF0 equ 0FEFh ;# ">
+"6472
+[; <" INTCON3 equ 0FF0h ;# ">
+"6563
+[; <" INTCON2 equ 0FF1h ;# ">
+"6632
+[; <" INTCON equ 0FF2h ;# ">
+"6768
+[; <" PROD equ 0FF3h ;# ">
+"6774
+[; <" PRODL equ 0FF3h ;# ">
+"6780
+[; <" PRODH equ 0FF4h ;# ">
+"6786
+[; <" TABLAT equ 0FF5h ;# ">
+"6794
+[; <" TBLPTR equ 0FF6h ;# ">
+"6800
+[; <" TBLPTRL equ 0FF6h ;# ">
+"6806
+[; <" TBLPTRH equ 0FF7h ;# ">
+"6812
+[; <" TBLPTRU equ 0FF8h ;# ">
+"6820
+[; <" PCLAT equ 0FF9h ;# ">
+"6827
+[; <" PC equ 0FF9h ;# ">
+"6833
+[; <" PCL equ 0FF9h ;# ">
+"6839
+[; <" PCLATH equ 0FFAh ;# ">
+"6845
+[; <" PCLATU equ 0FFBh ;# ">
+"6851
+[; <" STKPTR equ 0FFCh ;# ">
+"6956
+[; <" TOS equ 0FFDh ;# ">
+"6962
+[; <" TOSL equ 0FFDh ;# ">
+"6968
+[; <" TOSH equ 0FFEh ;# ">
+"6974
+[; <" TOSU equ 0FFFh ;# ">
+"22 I2C_Support.c
+[v _DS1621_Init `(v ~T0 @X0 1 ef ]
+"23
+{
+[e :U _DS1621_Init ]
+[f ]
+"24
+[v _Device `uc ~T0 @X0 1 a ]
+[e = _Device -> -> 72 `i `uc ]
+"25
+[e ( _I2C_Write_Cmd_Write_Data (3 , , _Device -> -> 172 `i `uc -> -> 2 `i `uc ]
+"26
+[e ( _I2C_Write_Cmd_Only (2 , _Device -> -> 238 `i `uc ]
+"27
+[e :UE 392 ]
+}
+"29
+[v _DS1621_Read_Temp `(i ~T0 @X0 1 ef ]
+"30
+{
+[e :U _DS1621_Read_Temp ]
+[f ]
+"32
+[v _Device `uc ~T0 @X0 1 a ]
+[e = _Device -> -> 72 `i `uc ]
+"33
+[v _Cmd `uc ~T0 @X0 1 a ]
+[e = _Cmd -> -> 170 `i `uc ]
+"34
+[v _Data_Ret `uc ~T0 @X0 1 a ]
+"35
+[e ( _I2C_Start ..  ]
+"36
+[e ( _I2C_Write (1 -> | << -> _Device `i -> 1 `i -> 0 `i `uc ]
+"37
+[e ( _I2C_Write (1 _Cmd ]
+"38
+[e ( _I2C_ReStart ..  ]
+"39
+[e ( _I2C_Write (1 -> | << -> _Device `i -> 1 `i -> 1 `i `uc ]
+"40
+[e = _Data_Ret ( _I2C_Read (1 -> -> 0 `i `uc ]
+"41
+[e ( _I2C_Stop ..  ]
+"42
+[e ) -> _Data_Ret `i ]
+[e $UE 393  ]
+"43
+[e :UE 393 ]
+}
+"45
+[v _DS3231_Read_Time `(v ~T0 @X0 1 ef ]
+"46
+{
+[e :U _DS3231_Read_Time ]
+[f ]
+"47
+[v _Device `uc ~T0 @X0 1 a ]
+[e = _Device -> -> 104 `i `uc ]
+"48
+[v _Address `uc ~T0 @X0 1 a ]
+[e = _Address -> -> 0 `i `uc ]
+"50
+[e ( _I2C_Start ..  ]
+"51
+[e ( _I2C_Write (1 -> | << -> _Device `i -> 1 `i -> 0 `i `uc ]
+"52
+[e ( _I2C_Write (1 _Address ]
+"53
+[e ( _I2C_ReStart ..  ]
+"54
+[e ( _I2C_Write (1 -> | << -> _Device `i -> 1 `i -> 1 `i `uc ]
+"55
+[e = _second ( _I2C_Read (1 -> -> 1 `i `uc ]
+"56
+[e = _minute ( _I2C_Read (1 -> -> 1 `i `uc ]
+"57
+[e = _hour ( _I2C_Read (1 -> -> 1 `i `uc ]
+"58
+[e = _dow ( _I2C_Read (1 -> -> 1 `i `uc ]
+"59
+[e = _day ( _I2C_Read (1 -> -> 1 `i `uc ]
+"60
+[e = _month ( _I2C_Read (1 -> -> 1 `i `uc ]
+"61
+[e = _year ( _I2C_Read (1 -> -> 0 `i `uc ]
+"62
+[e ( _I2C_Stop ..  ]
+"64
+[e :UE 394 ]
+}
+"66
+[v _DS3231_Setup_Time `(v ~T0 @X0 1 ef ]
+"67
+{
+[e :U _DS3231_Setup_Time ]
+[f ]
+"68
+[v _Device `uc ~T0 @X0 1 a ]
+[e = _Device -> -> 104 `i `uc ]
+"69
+[v _Address `uc ~T0 @X0 1 a ]
+[e = _Address -> -> 0 `i `uc ]
+"70
+[e = _second -> -> 6 `i `uc ]
+"71
+[e = _minute -> -> 40 `i `uc ]
+"72
+[e = _hour -> -> 19 `i `uc ]
+"73
+[e = _dow -> -> 1 `i `uc ]
+"74
+[e = _day -> -> 32 `i `uc ]
+"75
+[e = _month -> -> 4 `i `uc ]
+"76
+[e = _year -> -> 33 `i `uc ]
+"77
+[e ( _I2C_Start ..  ]
+"78
+[e ( _I2C_Write (1 -> | << -> _Device `i -> 1 `i -> 0 `i `uc ]
+"79
+[e ( _I2C_Write (1 _Address ]
+"80
+[e ( _I2C_Write (1 _second ]
+"81
+[e ( _I2C_Write (1 _minute ]
+"82
+[e ( _I2C_Write (1 _hour ]
+"83
+[e ( _I2C_Write (1 _dow ]
+"84
+[e ( _I2C_Write (1 _day ]
+"85
+[e ( _I2C_Write (1 _month ]
+"86
+[e ( _I2C_Write (1 _year ]
+"87
+[e ( _I2C_Stop ..  ]
+"88
+[e :UE 395 ]
+}
+"90
+[v _DS3231_Write_Time `(v ~T0 @X0 1 ef ]
+"91
+{
+[e :U _DS3231_Write_Time ]
+[f ]
+"92
+[v _Device `uc ~T0 @X0 1 a ]
+[e = _Device -> -> 104 `i `uc ]
+"93
+[v _Address `uc ~T0 @X0 1 a ]
+[e = _Address -> -> 0 `i `uc ]
+"94
+[e = _second -> ( _dec_2_bcd (1 _setup_second `uc ]
+"95
+[e = _minute -> ( _dec_2_bcd (1 _setup_minute `uc ]
+"96
+[e = _hour -> ( _dec_2_bcd (1 _setup_hour `uc ]
+"97
+[e = _dow -> -> 1 `i `uc ]
+"98
+[e = _day -> ( _dec_2_bcd (1 _setup_day `uc ]
+"99
+[e = _month -> ( _dec_2_bcd (1 _setup_month `uc ]
+"100
+[e = _year -> ( _dec_2_bcd (1 _setup_year `uc ]
+"101
+[e ( _I2C_Start ..  ]
+"102
+[e ( _I2C_Write (1 -> | << -> _Device `i -> 1 `i -> 0 `i `uc ]
+"103
+[e ( _I2C_Write (1 _Address ]
+"104
+[e ( _I2C_Write (1 _second ]
+"105
+[e ( _I2C_Write (1 _minute ]
+"106
+[e ( _I2C_Write (1 _hour ]
+"107
+[e ( _I2C_Write (1 _dow ]
+"108
+[e ( _I2C_Write (1 _day ]
+"109
+[e ( _I2C_Write (1 _month ]
+"110
+[e ( _I2C_Write (1 _year ]
+"111
+[e ( _I2C_Stop ..  ]
+"112
+[e :UE 396 ]
+}
+"114
+[v _DS3231_Write_Initial_Alarm_Time `(v ~T0 @X0 1 ef ]
+"115
+{
+[e :U _DS3231_Write_Initial_Alarm_Time ]
+[f ]
+"116
+[e ( _DS3231_Read_Time ..  ]
+"117
+[e = _alarm_date _day ]
+"118
+[v _Device `uc ~T0 @X0 1 a ]
+[e = _Device -> -> 104 `i `uc ]
+"119
+[v _Address `uc ~T0 @X0 1 a ]
+[e = _Address -> -> 7 `i `uc ]
+"120
+[e = _alarm_hour -> ( _dec_2_bcd (1 -> -> 1 `i `uc `uc ]
+"121
+[e = _alarm_minute -> ( _dec_2_bcd (1 -> -> 1 `i `uc `uc ]
+"122
+[e = _alarm_second -> ( _dec_2_bcd (1 -> -> 1 `i `uc `uc ]
+"123
+[e = _alarm_second -> & -> _alarm_second `i -> 127 `i `uc ]
+"124
+[e = _alarm_minute -> & -> _alarm_minute `i -> 127 `i `uc ]
+"125
+[e = _alarm_hour -> & -> _alarm_hour `i -> 127 `i `uc ]
+"126
+[e = _alarm_date -> | -> _alarm_date `i -> 128 `i `uc ]
+"128
+[e ( _I2C_Start ..  ]
+"129
+[e ( _I2C_Write (1 -> | << -> _Device `i -> 1 `i -> 0 `i `uc ]
+"130
+[e ( _I2C_Write (1 _Address ]
+"132
+[e ( _I2C_Write (1 _alarm_second ]
+"133
+[e ( _I2C_Write (1 _alarm_minute ]
+"134
+[e ( _I2C_Write (1 _alarm_hour ]
+"135
+[e ( _I2C_Write (1 _alarm_date ]
+"136
+[e ( _I2C_Stop ..  ]
+"137
+[e :UE 397 ]
+}
+"139
+[v _DS3231_Read_Alarm_Time `(v ~T0 @X0 1 ef ]
+"140
+{
+[e :U _DS3231_Read_Alarm_Time ]
+[f ]
+"141
+[v _Device `uc ~T0 @X0 1 a ]
+[e = _Device -> -> 104 `i `uc ]
+"142
+[v _Address `uc ~T0 @X0 1 a ]
+[e = _Address -> -> 7 `i `uc ]
+"143
+[e ( _I2C_Start ..  ]
+"144
+[e ( _I2C_Write (1 -> | << -> _Device `i -> 1 `i -> 0 `i `uc ]
+"145
+[e ( _I2C_Write (1 _Address ]
+"146
+[e ( _I2C_ReStart ..  ]
+"147
+[e ( _I2C_Write (1 -> | << -> _Device `i -> 1 `i -> 1 `i `uc ]
+"148
+[e = _alarm_second ( _I2C_Read (1 -> -> 1 `i `uc ]
+"149
+[e = _alarm_minute ( _I2C_Read (1 -> -> 1 `i `uc ]
+"150
+[e = _alarm_hour ( _I2C_Read (1 -> -> 1 `i `uc ]
+"151
+[e = _alarm_date ( _I2C_Read (1 -> -> 0 `i `uc ]
+"152
+[e ( _I2C_Stop ..  ]
+"153
+[e :UE 398 ]
+}
+"156
+[v _DS3231_Init `(v ~T0 @X0 1 ef ]
+"157
+{
+[e :U _DS3231_Init ]
+[f ]
+"158
+[v _Device `uc ~T0 @X0 1 a ]
+[e = _Device -> -> 104 `i `uc ]
+"159
+[v _Address_7 `uc ~T0 @X0 1 a ]
+[e = _Address_7 -> -> 7 `i `uc ]
+"160
+[v _Address_E `uc ~T0 @X0 1 a ]
+[e = _Address_E -> -> 14 `i `uc ]
+"161
+[v _control_E `uc ~T0 @X0 1 a ]
+"163
+[e = _control_E ( _I2C_Write_Address_Read_One_Byte (2 , _Device _Address_E ]
+"164
+[e = _control_E -> & -> _control_E `i -> 1 `i `uc ]
+"165
+[e = _control_E -> | -> _control_E `i -> 37 `i `uc ]
+"166
+[e ( _I2C_Write_Address_Write_One_Byte (3 , , _Device _Address_E _control_E ]
+"167
+[e ( _I2C_Start ..  ]
+"168
+[e ( _I2C_Write (1 -> | << -> _Device `i -> 1 `i -> 0 `i `uc ]
+"169
+[e ( _I2C_Write (1 _Address_7 ]
+"170
+[e ( _I2C_ReStart ..  ]
+"171
+[e ( _I2C_Write (1 -> | << -> _Device `i -> 1 `i -> 1 `i `uc ]
+"172
+[e = _alarm_second ( _I2C_Read (1 -> -> 1 `i `uc ]
+"173
+[e = _alarm_minute ( _I2C_Read (1 -> -> 1 `i `uc ]
+"174
+[e = _alarm_hour ( _I2C_Read (1 -> -> 1 `i `uc ]
+"175
+[e = _alarm_date ( _I2C_Read (1 -> -> 0 `i `uc ]
+"177
+[e = _alarm_second -> & -> _alarm_second `i -> 127 `i `uc ]
+"178
+[e = _alarm_minute -> & -> _alarm_minute `i -> 127 `i `uc ]
+"179
+[e = _alarm_hour -> & -> _alarm_hour `i -> 127 `i `uc ]
+"180
+[e = _alarm_date -> | -> _alarm_date `i -> 128 `i `uc ]
+"182
+[e ( _I2C_Start ..  ]
+"183
+[e ( _I2C_Write (1 -> | << -> _Device `i -> 1 `i -> 0 `i `uc ]
+"184
+[e ( _I2C_Write (1 _Address_7 ]
+"186
+[e ( _I2C_Write (1 _alarm_second ]
+"187
+[e ( _I2C_Write (1 _alarm_minute ]
+"188
+[e ( _I2C_Write (1 _alarm_hour ]
+"189
+[e ( _I2C_Write (1 _alarm_date ]
+"190
+[e ( _I2C_Stop ..  ]
+"191
+[e :UE 399 ]
+}
+"193
+[v _DS3231_Write_Alarm_Time `(v ~T0 @X0 1 ef ]
+"194
+{
+[e :U _DS3231_Write_Alarm_Time ]
+[f ]
+"195
+[e ( _DS3231_Read_Time ..  ]
+"196
+[e = _alarm_date _day ]
+"197
+[v _Device `uc ~T0 @X0 1 a ]
+[e = _Device -> -> 104 `i `uc ]
+"198
+[v _Address `uc ~T0 @X0 1 a ]
+[e = _Address -> -> 7 `i `uc ]
+"199
+[e = _alarm_hour -> ( _dec_2_bcd (1 _setup_alarm_hour `uc ]
+"200
+[e = _alarm_minute -> ( _dec_2_bcd (1 _setup_alarm_minute `uc ]
+"201
+[e = _alarm_second -> ( _dec_2_bcd (1 _setup_alarm_second `uc ]
+"202
+[e = _alarm_second -> & -> _alarm_second `i -> 127 `i `uc ]
+"203
+[e = _alarm_minute -> & -> _alarm_minute `i -> 127 `i `uc ]
+"204
+[e = _alarm_hour -> & -> _alarm_hour `i -> 127 `i `uc ]
+"205
+[e = _alarm_date -> | -> _alarm_date `i -> 128 `i `uc ]
+"206
+[e ( _I2C_Start ..  ]
+"207
+[e ( _I2C_Write (1 -> | << -> _Device `i -> 1 `i -> 0 `i `uc ]
+"208
+[e ( _I2C_Write (1 _Address ]
+"210
+[e ( _I2C_Write (1 _alarm_second ]
+"211
+[e ( _I2C_Write (1 _alarm_minute ]
+"212
+[e ( _I2C_Write (1 _alarm_hour ]
+"213
+[e ( _I2C_Write (1 _alarm_date ]
+"214
+[e ( _I2C_Stop ..  ]
+"215
+[e :UE 400 ]
+}
+"217
+[v _DS3231_Turn_Off_Alarm `(v ~T0 @X0 1 ef ]
+"218
+{
+[e :U _DS3231_Turn_Off_Alarm ]
+[f ]
+"219
+[v _Device `uc ~T0 @X0 1 a ]
+[e = _Device -> -> 104 `i `uc ]
+"220
+[v _Address_E `uc ~T0 @X0 1 a ]
+[e = _Address_E -> -> 14 `i `uc ]
+"221
+[v _Address_F `uc ~T0 @X0 1 a ]
+[e = _Address_F -> -> 15 `i `uc ]
+"222
+[v _control_E `uc ~T0 @X0 1 a ]
+"223
+[v _control_F `uc ~T0 @X0 1 a ]
+"225
+[e = _control_E ( _I2C_Write_Address_Read_One_Byte (2 , _Device _Address_E ]
+"226
+[e = _control_E -> & -> _control_E `i -> 254 `i `uc ]
+"227
+[e ( _I2C_Write_Address_Write_One_Byte (3 , , _Device _Address_E _control_E ]
+"228
+[e = _control_F ( _I2C_Write_Address_Read_One_Byte (2 , _Device _Address_F ]
+"229
+[e = _control_F -> & -> _control_F `i -> 254 `i `uc ]
+"230
+[e ( _I2C_Write_Address_Write_One_Byte (3 , , _Device _Address_F _control_F ]
+"231
+[e ( _DS3231_Init ..  ]
+"232
+[e :UE 401 ]
+}
+"234
+[v _DS3231_Turn_On_Alarm `(v ~T0 @X0 1 ef ]
+"235
+{
+[e :U _DS3231_Turn_On_Alarm ]
+[f ]
+"236
+[v _Device `uc ~T0 @X0 1 a ]
+[e = _Device -> -> 104 `i `uc ]
+"237
+[v _Address_E `uc ~T0 @X0 1 a ]
+[e = _Address_E -> -> 14 `i `uc ]
+"238
+[v _Address_F `uc ~T0 @X0 1 a ]
+[e = _Address_F -> -> 15 `i `uc ]
+"239
+[v _control_E `uc ~T0 @X0 1 a ]
+"240
+[v _control_F `uc ~T0 @X0 1 a ]
+"242
+[e = _control_E ( _I2C_Write_Address_Read_One_Byte (2 , _Device _Address_E ]
+"243
+[e = _control_E -> | -> _control_E `i -> 1 `i `uc ]
+"244
+[e ( _I2C_Write_Address_Write_One_Byte (3 , , _Device _Address_E _control_E ]
+"246
+[e = _control_F ( _I2C_Write_Address_Read_One_Byte (2 , _Device _Address_F ]
+"247
+[e = _control_F -> & -> _control_F `i -> 254 `i `uc ]
+"248
+[e ( _I2C_Write_Address_Write_One_Byte (3 , , _Device _Address_F _control_F ]
+"249
+[e ( _DS3231_Init ..  ]
+"251
+[e :UE 402 ]
+}

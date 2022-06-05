@@ -1,0 +1,786 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"10 utils.c
+[v _nec_ok `s ~T0 @X0 0 e ]
+"6636 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4620.h
+[s S351 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S351 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"6646
+[s S352 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S352 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE GIE ]
+"6656
+[s S353 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S353 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE GIEL GIEH ]
+"6666
+[s S354 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S354 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"6676
+[s S355 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S355 . . GIEL GIEH ]
+"6635
+[u S350 `S351 1 `S352 1 `S353 1 `S354 1 `S355 1 ]
+[n S350 . . . . . . ]
+"6682
+[v _INTCONbits `VS350 ~T0 @X0 0 e@4082 ]
+"6567
+[s S347 :7 `uc 1 :1 `uc 1 ]
+[n S347 . . NOT_RBPU ]
+"6571
+[s S348 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S348 . RBIP . TMR0IP . INTEDG2 INTEDG1 INTEDG0 nRBPU ]
+"6581
+[s S349 :7 `uc 1 :1 `uc 1 ]
+[n S349 . . RBPU ]
+"6566
+[u S346 `S347 1 `S348 1 `S349 1 ]
+[n S346 . . . . ]
+"6586
+[v _INTCON2bits `VS346 ~T0 @X0 0 e@4081 ]
+"8 utils.c
+[v _found `uc ~T0 @X0 0 e ]
+"9
+[v _Nec_code1 `uc ~T0 @X0 0 e ]
+"11
+[v _array1 `uc ~T0 @X0 -> 0 `x e ]
+"207 C:\Program Files (x86)\Microchip\xc8\v1.34\include\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"7 utils.h
+[v _Activate_Buzzer `(v ~T0 @X0 0 ef ]
+"12
+[v _Wait_One_Sec `(v ~T0 @X0 0 ef ]
+"11
+[v _Deactivate_Buzzer `(v ~T0 @X0 0 ef ]
+"13
+[v _do_update_pwm `(v ~T0 @X0 0 ef1`uc ]
+"12 utils.c
+[v _duty_cycle `uc ~T0 @X0 0 e ]
+"9 utils.h
+[v _Activate_Buzzer_2KHz `(v ~T0 @X0 0 ef ]
+"10
+[v _Activate_Buzzer_500Hz `(v ~T0 @X0 0 ef ]
+"5396 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4620.h
+[v _PR2 `Vuc ~T0 @X0 0 e@4043 ]
+"5326
+[v _T2CON `Vuc ~T0 @X0 0 e@4042 ]
+"4519
+[v _CCPR2L `Vuc ~T0 @X0 0 e@4027 ]
+"4435
+[v _CCP2CON `Vuc ~T0 @X0 0 e@4026 ]
+"193
+[s S17 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S17 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"203
+[s S18 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S18 . INT0 INT1 INT2 CCP2 KBI0 KBI1 KBI2 KBI3 ]
+"213
+[s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S19 . AN12 AN10 AN8 AN9 AN11 PGM PGC PGD ]
+"223
+[s S20 :3 `uc 1 :1 `uc 1 ]
+[n S20 . . CCP2_PA2 ]
+"192
+[u S16 `S17 1 `S18 1 `S19 1 `S20 1 ]
+[n S16 . . . . . ]
+"228
+[v _PORTBbits `VS16 ~T0 @X0 0 e@3969 ]
+"4531
+[v _CCP1CON `Vuc ~T0 @X0 0 e@4029 ]
+"4633
+[v _CCPR1L `Vuc ~T0 @X0 0 e@4030 ]
+"675
+[v _PORTE `Vuc ~T0 @X0 0 e@3972 ]
+"16 utils.h
+[v _get_full_ADC `(ui ~T0 @X0 0 ef ]
+"4811 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4620.h
+[s S256 :1 `uc 1 :1 `uc 1 ]
+[n S256 . . GO_NOT_DONE ]
+"4815
+[s S257 :1 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S257 . ADON GO_nDONE CHS ]
+"4820
+[s S258 :1 `uc 1 :1 `uc 1 ]
+[n S258 . . GO_NOT_DONE ]
+"4824
+[s S259 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S259 . . GO CHS0 CHS1 CHS2 CHS3 ]
+"4832
+[s S260 :1 `uc 1 :1 `uc 1 ]
+[n S260 . . DONE ]
+"4836
+[s S261 :1 `uc 1 :1 `uc 1 ]
+[n S261 . . NOT_DONE ]
+"4840
+[s S262 :1 `uc 1 :1 `uc 1 ]
+[n S262 . . nDONE ]
+"4844
+[s S263 :1 `uc 1 :1 `uc 1 ]
+[n S263 . . GO_DONE ]
+"4848
+[s S264 :1 `uc 1 :1 `uc 1 ]
+[n S264 . . GODONE ]
+"4810
+[u S255 `S256 1 `S257 1 `S258 1 `S259 1 `S260 1 `S261 1 `S262 1 `S263 1 `S264 1 ]
+[n S255 . . . . . . . . . . ]
+"4853
+[v _ADCON0bits `VS255 ~T0 @X0 0 e@4034 ]
+"4939
+[v _ADRESH `Vuc ~T0 @X0 0 e@4036 ]
+"4933
+[v _ADRESL `Vuc ~T0 @X0 0 e@4035 ]
+"4805
+[v _ADCON0 `Vuc ~T0 @X0 0 e@4034 ]
+"4715
+[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
+"4645
+[v _ADCON2 `Vuc ~T0 @X0 0 e@4032 ]
+"51 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4620.h
+[; <" PORTA equ 0F80h ;# ">
+"189
+[; <" PORTB equ 0F81h ;# ">
+"359
+[; <" PORTC equ 0F82h ;# ">
+"536
+[; <" PORTD equ 0F83h ;# ">
+"677
+[; <" PORTE equ 0F84h ;# ">
+"1005
+[; <" LATA equ 0F89h ;# ">
+"1137
+[; <" LATB equ 0F8Ah ;# ">
+"1269
+[; <" LATC equ 0F8Bh ;# ">
+"1401
+[; <" LATD equ 0F8Ch ;# ">
+"1533
+[; <" LATE equ 0F8Dh ;# ">
+"1635
+[; <" TRISA equ 0F92h ;# ">
+"1640
+[; <" DDRA equ 0F92h ;# ">
+"1856
+[; <" TRISB equ 0F93h ;# ">
+"1861
+[; <" DDRB equ 0F93h ;# ">
+"2077
+[; <" TRISC equ 0F94h ;# ">
+"2082
+[; <" DDRC equ 0F94h ;# ">
+"2298
+[; <" TRISD equ 0F95h ;# ">
+"2303
+[; <" DDRD equ 0F95h ;# ">
+"2519
+[; <" TRISE equ 0F96h ;# ">
+"2524
+[; <" DDRE equ 0F96h ;# ">
+"2682
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"2746
+[; <" PIE1 equ 0F9Dh ;# ">
+"2825
+[; <" PIR1 equ 0F9Eh ;# ">
+"2904
+[; <" IPR1 equ 0F9Fh ;# ">
+"2983
+[; <" PIE2 equ 0FA0h ;# ">
+"3048
+[; <" PIR2 equ 0FA1h ;# ">
+"3113
+[; <" IPR2 equ 0FA2h ;# ">
+"3178
+[; <" EECON1 equ 0FA6h ;# ">
+"3243
+[; <" EECON2 equ 0FA7h ;# ">
+"3249
+[; <" EEDATA equ 0FA8h ;# ">
+"3255
+[; <" EEADR equ 0FA9h ;# ">
+"3261
+[; <" EEADRH equ 0FAAh ;# ">
+"3267
+[; <" RCSTA equ 0FABh ;# ">
+"3272
+[; <" RCSTA1 equ 0FABh ;# ">
+"3476
+[; <" TXSTA equ 0FACh ;# ">
+"3481
+[; <" TXSTA1 equ 0FACh ;# ">
+"3773
+[; <" TXREG equ 0FADh ;# ">
+"3778
+[; <" TXREG1 equ 0FADh ;# ">
+"3784
+[; <" RCREG equ 0FAEh ;# ">
+"3789
+[; <" RCREG1 equ 0FAEh ;# ">
+"3795
+[; <" SPBRG equ 0FAFh ;# ">
+"3800
+[; <" SPBRG1 equ 0FAFh ;# ">
+"3806
+[; <" SPBRGH equ 0FB0h ;# ">
+"3812
+[; <" T3CON equ 0FB1h ;# ">
+"3925
+[; <" TMR3 equ 0FB2h ;# ">
+"3931
+[; <" TMR3L equ 0FB2h ;# ">
+"3937
+[; <" TMR3H equ 0FB3h ;# ">
+"3943
+[; <" CMCON equ 0FB4h ;# ">
+"4038
+[; <" CVRCON equ 0FB5h ;# ">
+"4116
+[; <" ECCP1AS equ 0FB6h ;# ">
+"4197
+[; <" PWM1CON equ 0FB7h ;# ">
+"4266
+[; <" BAUDCON equ 0FB8h ;# ">
+"4271
+[; <" BAUDCTL equ 0FB8h ;# ">
+"4437
+[; <" CCP2CON equ 0FBAh ;# ">
+"4515
+[; <" CCPR2 equ 0FBBh ;# ">
+"4521
+[; <" CCPR2L equ 0FBBh ;# ">
+"4527
+[; <" CCPR2H equ 0FBCh ;# ">
+"4533
+[; <" CCP1CON equ 0FBDh ;# ">
+"4629
+[; <" CCPR1 equ 0FBEh ;# ">
+"4635
+[; <" CCPR1L equ 0FBEh ;# ">
+"4641
+[; <" CCPR1H equ 0FBFh ;# ">
+"4647
+[; <" ADCON2 equ 0FC0h ;# ">
+"4717
+[; <" ADCON1 equ 0FC1h ;# ">
+"4807
+[; <" ADCON0 equ 0FC2h ;# ">
+"4929
+[; <" ADRES equ 0FC3h ;# ">
+"4935
+[; <" ADRESL equ 0FC3h ;# ">
+"4941
+[; <" ADRESH equ 0FC4h ;# ">
+"4947
+[; <" SSPCON2 equ 0FC5h ;# ">
+"5008
+[; <" SSPCON1 equ 0FC6h ;# ">
+"5077
+[; <" SSPSTAT equ 0FC7h ;# ">
+"5316
+[; <" SSPADD equ 0FC8h ;# ">
+"5322
+[; <" SSPBUF equ 0FC9h ;# ">
+"5328
+[; <" T2CON equ 0FCAh ;# ">
+"5398
+[; <" PR2 equ 0FCBh ;# ">
+"5403
+[; <" MEMCON equ 0FCBh ;# ">
+"5507
+[; <" TMR2 equ 0FCCh ;# ">
+"5513
+[; <" T1CON equ 0FCDh ;# ">
+"5617
+[; <" TMR1 equ 0FCEh ;# ">
+"5623
+[; <" TMR1L equ 0FCEh ;# ">
+"5629
+[; <" TMR1H equ 0FCFh ;# ">
+"5635
+[; <" RCON equ 0FD0h ;# ">
+"5767
+[; <" WDTCON equ 0FD1h ;# ">
+"5794
+[; <" HLVDCON equ 0FD2h ;# ">
+"5799
+[; <" LVDCON equ 0FD2h ;# ">
+"6063
+[; <" OSCCON equ 0FD3h ;# ">
+"6139
+[; <" T0CON equ 0FD5h ;# ">
+"6215
+[; <" TMR0 equ 0FD6h ;# ">
+"6221
+[; <" TMR0L equ 0FD6h ;# ">
+"6227
+[; <" TMR0H equ 0FD7h ;# ">
+"6233
+[; <" STATUS equ 0FD8h ;# ">
+"6311
+[; <" FSR2 equ 0FD9h ;# ">
+"6317
+[; <" FSR2L equ 0FD9h ;# ">
+"6323
+[; <" FSR2H equ 0FDAh ;# ">
+"6329
+[; <" PLUSW2 equ 0FDBh ;# ">
+"6335
+[; <" PREINC2 equ 0FDCh ;# ">
+"6341
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"6347
+[; <" POSTINC2 equ 0FDEh ;# ">
+"6353
+[; <" INDF2 equ 0FDFh ;# ">
+"6359
+[; <" BSR equ 0FE0h ;# ">
+"6365
+[; <" FSR1 equ 0FE1h ;# ">
+"6371
+[; <" FSR1L equ 0FE1h ;# ">
+"6377
+[; <" FSR1H equ 0FE2h ;# ">
+"6383
+[; <" PLUSW1 equ 0FE3h ;# ">
+"6389
+[; <" PREINC1 equ 0FE4h ;# ">
+"6395
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"6401
+[; <" POSTINC1 equ 0FE6h ;# ">
+"6407
+[; <" INDF1 equ 0FE7h ;# ">
+"6413
+[; <" WREG equ 0FE8h ;# ">
+"6424
+[; <" FSR0 equ 0FE9h ;# ">
+"6430
+[; <" FSR0L equ 0FE9h ;# ">
+"6436
+[; <" FSR0H equ 0FEAh ;# ">
+"6442
+[; <" PLUSW0 equ 0FEBh ;# ">
+"6448
+[; <" PREINC0 equ 0FECh ;# ">
+"6454
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"6460
+[; <" POSTINC0 equ 0FEEh ;# ">
+"6466
+[; <" INDF0 equ 0FEFh ;# ">
+"6472
+[; <" INTCON3 equ 0FF0h ;# ">
+"6563
+[; <" INTCON2 equ 0FF1h ;# ">
+"6632
+[; <" INTCON equ 0FF2h ;# ">
+"6768
+[; <" PROD equ 0FF3h ;# ">
+"6774
+[; <" PRODL equ 0FF3h ;# ">
+"6780
+[; <" PRODH equ 0FF4h ;# ">
+"6786
+[; <" TABLAT equ 0FF5h ;# ">
+"6794
+[; <" TBLPTR equ 0FF6h ;# ">
+"6800
+[; <" TBLPTRL equ 0FF6h ;# ">
+"6806
+[; <" TBLPTRH equ 0FF7h ;# ">
+"6812
+[; <" TBLPTRU equ 0FF8h ;# ">
+"6820
+[; <" PCLAT equ 0FF9h ;# ">
+"6827
+[; <" PC equ 0FF9h ;# ">
+"6833
+[; <" PCL equ 0FF9h ;# ">
+"6839
+[; <" PCLATH equ 0FFAh ;# ">
+"6845
+[; <" PCLATU equ 0FFBh ;# ">
+"6851
+[; <" STKPTR equ 0FFCh ;# ">
+"6956
+[; <" TOS equ 0FFDh ;# ">
+"6962
+[; <" TOSL equ 0FFDh ;# ">
+"6968
+[; <" TOSH equ 0FFEh ;# ">
+"6974
+[; <" TOSU equ 0FFFh ;# ">
+"14 utils.c
+[v _check_for_button_input `(uc ~T0 @X0 1 ef ]
+"15
+{
+[e :U _check_for_button_input ]
+[f ]
+"16
+[e $ ! == -> _nec_ok `i -> 1 `i 397  ]
+"17
+{
+"18
+[e = _nec_ok -> -> 0 `i `s ]
+"22
+[e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
+"23
+[e = . . _INTCON2bits 1 6 -> -> 0 `i `uc ]
+"25
+[e = _found -> -> 255 `i `uc ]
+"26
+{
+[v _j `i ~T0 @X0 1 a ]
+[e = _j -> 0 `i ]
+[e $ < _j -> 21 `i 398  ]
+[e $U 399  ]
+"27
+[e :U 398 ]
+{
+"28
+[e $ ! == -> _Nec_code1 `i -> *U + &U _array1 * -> -> _j `ui `ux -> -> # *U &U _array1 `ui `ux `i 401  ]
+"29
+{
+"30
+[e = _found -> _j `uc ]
+"31
+[e = _j -> 21 `i ]
+"32
+}
+[e :U 401 ]
+"33
+}
+"26
+[e ++ _j -> 1 `i ]
+[e $ < _j -> 21 `i 398  ]
+[e :U 399 ]
+"33
+}
+"35
+[e $ ! == -> _found `i -> 255 `i 402  ]
+"36
+{
+"37
+[e ( _printf :s 1C ]
+"38
+[e ) -> -> 0 `i `uc ]
+[e $UE 396  ]
+"39
+}
+[e $U 403  ]
+"40
+[e :U 402 ]
+"41
+{
+"42
+[e ) -> -> 1 `i `uc ]
+[e $UE 396  ]
+"43
+}
+[e :U 403 ]
+"44
+}
+[e :U 397 ]
+"45
+[e :UE 396 ]
+}
+"47
+[v _bcd_2_dec `(uc ~T0 @X0 1 ef1`uc ]
+"48
+{
+[e :U _bcd_2_dec ]
+"47
+[v _bcd `uc ~T0 @X0 1 r1 ]
+"48
+[f ]
+"49
+[v _dec `i ~T0 @X0 1 a ]
+"50
+[e = _dec + * >> -> _bcd `i -> 4 `i -> 10 `i & -> _bcd `i -> 15 `i ]
+"51
+[e ) -> _dec `uc ]
+[e $UE 404  ]
+"52
+[e :UE 404 ]
+}
+"54
+[v _dec_2_bcd `(i ~T0 @X0 1 ef1`uc ]
+"55
+{
+[e :U _dec_2_bcd ]
+"54
+[v _dec `uc ~T0 @X0 1 r1 ]
+"55
+[f ]
+"56
+[v _bcd `i ~T0 @X0 1 a ]
+"57
+[e = _bcd + << / -> _dec `i -> 10 `i -> 4 `i % -> _dec `i -> 10 `i ]
+"58
+[e ) _bcd ]
+[e $UE 405  ]
+"59
+[e :UE 405 ]
+}
+"61
+[v _Do_Beep `(v ~T0 @X0 1 ef ]
+"62
+{
+[e :U _Do_Beep ]
+[f ]
+"63
+[e ( _Activate_Buzzer ..  ]
+"64
+[e ( _Wait_One_Sec ..  ]
+"65
+[e ( _Deactivate_Buzzer ..  ]
+"66
+[e ( _Wait_One_Sec ..  ]
+"67
+[e ( _do_update_pwm (1 _duty_cycle ]
+"68
+[e :UE 406 ]
+}
+"70
+[v _Do_Beep_Good `(v ~T0 @X0 1 ef ]
+"71
+{
+[e :U _Do_Beep_Good ]
+[f ]
+"73
+[e ( _Activate_Buzzer_2KHz ..  ]
+"74
+[e ( _Wait_One_Sec ..  ]
+"75
+[e ( _Deactivate_Buzzer ..  ]
+"76
+[e ( _Wait_One_Sec ..  ]
+"77
+[e ( _do_update_pwm (1 _duty_cycle ]
+"78
+[e :UE 407 ]
+}
+"80
+[v _Do_Beep_Bad `(v ~T0 @X0 1 ef ]
+"81
+{
+[e :U _Do_Beep_Bad ]
+[f ]
+"83
+[e ( _Activate_Buzzer_500Hz ..  ]
+"84
+[e ( _Wait_One_Sec ..  ]
+"85
+[e ( _Deactivate_Buzzer ..  ]
+"86
+[e ( _Wait_One_Sec ..  ]
+"87
+[e ( _do_update_pwm (1 _duty_cycle ]
+"89
+[e :UE 408 ]
+}
+"91
+[v _Wait_One_Sec `(v ~T0 @X0 1 ef ]
+"92
+{
+[e :U _Wait_One_Sec ]
+[f ]
+"93
+{
+[v _k `i ~T0 @X0 1 a ]
+[e = _k -> 0 `i ]
+[e $ < -> _k `ui -> 65535 `ui 410  ]
+[e $U 411  ]
+[e :U 410 ]
+[e ++ _k -> 1 `i ]
+[e $ < -> _k `ui -> 65535 `ui 410  ]
+[e :U 411 ]
+}
+"94
+[e :UE 409 ]
+}
+"96
+[v _Activate_Buzzer `(v ~T0 @X0 1 ef ]
+"97
+{
+[e :U _Activate_Buzzer ]
+[f ]
+"98
+[e = _PR2 -> -> 249 `i `uc ]
+"99
+[e = _T2CON -> -> 5 `i `uc ]
+"100
+[e = _CCPR2L -> -> 74 `i `uc ]
+"101
+[e = _CCP2CON -> -> 60 `i `uc ]
+"102
+[e :UE 413 ]
+}
+"104
+[v _Activate_Buzzer_500Hz `(v ~T0 @X0 1 ef ]
+"105
+{
+[e :U _Activate_Buzzer_500Hz ]
+[f ]
+"107
+[e = _PR2 -> -> 249 `i `uc ]
+"108
+[e = _T2CON -> -> 7 `i `uc ]
+"109
+[e = _CCPR2L -> -> 124 `i `uc ]
+"110
+[e = _CCP2CON -> -> 60 `i `uc ]
+"111
+[e :UE 414 ]
+}
+"113
+[v _Activate_Buzzer_2KHz `(v ~T0 @X0 1 ef ]
+"114
+{
+[e :U _Activate_Buzzer_2KHz ]
+[f ]
+"116
+[e = _PR2 -> -> 249 `i `uc ]
+"117
+[e = _T2CON -> -> 5 `i `uc ]
+"118
+[e = _CCPR2L -> -> 124 `i `uc ]
+"119
+[e = _CCP2CON -> -> 60 `i `uc ]
+"120
+[e :UE 415 ]
+}
+"122
+[v _Activate_Buzzer_4KHz `(v ~T0 @X0 1 ef ]
+"123
+{
+[e :U _Activate_Buzzer_4KHz ]
+[f ]
+"125
+[e = _PR2 -> -> 124 `i `uc ]
+"126
+[e = _T2CON -> -> 5 `i `uc ]
+"127
+[e = _CCPR2L -> -> 62 `i `uc ]
+"128
+[e = _CCP2CON -> -> 28 `i `uc ]
+"129
+[e :UE 416 ]
+}
+"131
+[v _Deactivate_Buzzer `(v ~T0 @X0 1 ef ]
+"132
+{
+[e :U _Deactivate_Buzzer ]
+[f ]
+"133
+[e = _CCP2CON -> -> 0 `i `uc ]
+"134
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+"135
+[e :UE 417 ]
+}
+"137
+[v _do_update_pwm `(v ~T0 @X0 1 ef1`uc ]
+"138
+{
+[e :U _do_update_pwm ]
+[v _duty_cycle `uc ~T0 @X0 1 r1 ]
+[f ]
+"139
+[v _dc_f `f ~T0 @X0 1 a ]
+"140
+[v _dc_I `i ~T0 @X0 1 a ]
+"141
+[e = _PR2 -> -> 4 `i `uc ]
+"142
+[e = _T2CON -> -> 7 `i `uc ]
+"143
+[e = _dc_f -> / * .4.0 -> _duty_cycle `d .20.0 `f ]
+"144
+[e = _dc_I -> _dc_f `i ]
+"145
+[e $ ! > _dc_I -> _duty_cycle `i 419  ]
+[e ++ _dc_I -> 1 `i ]
+[e :U 419 ]
+"146
+[e = _CCP1CON -> | << & _dc_I -> 3 `i -> 4 `i -> 12 `i `uc ]
+"147
+[e = _CCPR1L -> >> _dc_I -> 2 `i `uc ]
+"148
+[e :UE 418 ]
+}
+"150
+[v _Set_RGB_Color `(v ~T0 @X0 1 ef1`uc ]
+"151
+{
+[e :U _Set_RGB_Color ]
+"150
+[v _color `uc ~T0 @X0 1 r1 ]
+"151
+[f ]
+"153
+[e $ ! == -> _color `i -> 8 `i 421  ]
+[e = _color -> -> 0 `i `uc ]
+[e :U 421 ]
+"154
+[e = _PORTE _color ]
+"155
+[e :UE 420 ]
+}
+"157
+[v _read_volt `(f ~T0 @X0 1 ef ]
+"158
+{
+[e :U _read_volt ]
+[f ]
+"159
+[v _nStep `i ~T0 @X0 1 a ]
+[e = _nStep -> ( _get_full_ADC ..  `i ]
+"160
+[v _volt `f ~T0 @X0 1 a ]
+[e = _volt -> / -> * _nStep -> 5 `i `d .1024.0 `f ]
+"161
+[e ) _volt ]
+[e $UE 422  ]
+"163
+[e :UE 422 ]
+}
+"165
+[v _get_full_ADC `(ui ~T0 @X0 1 ef ]
+"166
+{
+[e :U _get_full_ADC ]
+[f ]
+"168
+[v _result `ui ~T0 @X0 1 a ]
+"169
+[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
+"170
+[e $U 424  ]
+[e :U 425 ]
+[e :U 424 ]
+[e $ == -> . . _ADCON0bits 4 1 `i -> 1 `i 425  ]
+[e :U 426 ]
+"171
+[e = _result -> + * -> _ADRESH `i -> 256 `i -> _ADRESL `i `ui ]
+"173
+[e ) _result ]
+[e $UE 423  ]
+"174
+[e :UE 423 ]
+}
+"176
+[v _Init_ADC `(v ~T0 @X0 1 ef ]
+"177
+{
+[e :U _Init_ADC ]
+[f ]
+"179
+[e = _ADCON0 -> -> 1 `i `uc ]
+"180
+[e = _ADCON1 -> -> 14 `i `uc ]
+"181
+[e = _ADCON2 -> -> 169 `i `uc ]
+"182
+[e :UE 427 ]
+}
+[p f _printf 8388608 ]
+[a 1C 67 97 110 110 111 116 32 102 105 110 100 32 98 117 116 116 111 110 32 13 10 0 ]
+

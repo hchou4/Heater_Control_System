@@ -1,0 +1,684 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"4 I2C_Support.h
+[v _DS3231_Read_Alarm_Time `(v ~T0 @X0 0 ef ]
+"15 Setup_Alarm_Time.c
+[v _alarm_second `uc ~T0 @X0 0 e ]
+"2 utils.h
+[v _bcd_2_dec `(uc ~T0 @X0 0 ef1`uc ]
+"15 Setup_Alarm_Time.c
+[v _alarm_minute `uc ~T0 @X0 0 e ]
+[v _alarm_hour `uc ~T0 @X0 0 e ]
+"16
+[v _setup_alarm_second `uc ~T0 @X0 0 e ]
+[v _setup_alarm_minute `uc ~T0 @X0 0 e ]
+[v _setup_alarm_hour `uc ~T0 @X0 0 e ]
+"8 Setup_Alarm_Time.h
+[v _Initialize_Setup_Alarm_Time_Screen `(v ~T0 @X0 0 ef ]
+"9
+[v _Update_Setup_Alarm_Time_Screen `(v ~T0 @X0 0 ef ]
+"1 utils.h
+[v _check_for_button_input `(uc ~T0 @X0 0 ef ]
+"17 Setup_Alarm_Time.c
+[v _found `uc ~T0 @X0 0 e ]
+"5 utils.h
+[v _Do_Beep_Good `(v ~T0 @X0 0 ef ]
+"5 Setup_Alarm_Time.h
+[v _Go_Prev_Alarm_Field `(v ~T0 @X0 0 ef ]
+"4
+[v _Go_Next_Alarm_Field `(v ~T0 @X0 0 ef ]
+"7
+[v _Do_Save_New_Alarm_Time `(v ~T0 @X0 0 ef ]
+"3
+[v _Decrease_Alarm_Time `(v ~T0 @X0 0 ef ]
+"2
+[v _Increase_Alarm_Time `(v ~T0 @X0 0 ef ]
+"6
+[v _Exit_Setup_Alarm_Time `(v ~T0 @X0 0 ef ]
+"6 utils.h
+[v _Do_Beep_Bad `(v ~T0 @X0 0 ef ]
+"9 Setup_Time.h
+[v _Update_Setup_Screen_Cursor_Forward `(v ~T0 @X0 0 ef1`uc ]
+"10
+[v _Update_Setup_Screen_Cursor_Backward `(v ~T0 @X0 0 ef1`uc ]
+"2 I2C_Support.h
+[v _DS3231_Read_Time `(v ~T0 @X0 0 ef ]
+"2 Main_Screen.h
+[v _Initialize_Screen `(v ~T0 @X0 0 ef ]
+"5 I2C_Support.h
+[v _DS3231_Write_Alarm_Time `(v ~T0 @X0 0 ef ]
+"101 ST7735_TFT.h
+[v _fillScreen `(v ~T0 @X0 0 ef1`ui ]
+"43 C:\Program Files (x86)\Microchip\xc8\v1.34\include\string.h
+[v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
+"18 Setup_Alarm_Time.c
+[v _txt `*uc ~T0 @X0 0 e ]
+"94 ST7735_TFT.h
+[v _drawtext `(v ~T0 @X0 0 ef6`uc`uc`*uc`ui`ui`uc ]
+"93
+[v _fillRect `(v ~T0 @X0 0 ef5`uc`uc`uc`uc`ui ]
+"207 C:\Program Files (x86)\Microchip\xc8\v1.34\include\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"14 Setup_Alarm_Time.c
+[v _setup_alarm_time `uc ~T0 @X0 -> 0 `x e ]
+"51 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f4620.h
+[; <" PORTA equ 0F80h ;# ">
+"189
+[; <" PORTB equ 0F81h ;# ">
+"359
+[; <" PORTC equ 0F82h ;# ">
+"536
+[; <" PORTD equ 0F83h ;# ">
+"677
+[; <" PORTE equ 0F84h ;# ">
+"1005
+[; <" LATA equ 0F89h ;# ">
+"1137
+[; <" LATB equ 0F8Ah ;# ">
+"1269
+[; <" LATC equ 0F8Bh ;# ">
+"1401
+[; <" LATD equ 0F8Ch ;# ">
+"1533
+[; <" LATE equ 0F8Dh ;# ">
+"1635
+[; <" TRISA equ 0F92h ;# ">
+"1640
+[; <" DDRA equ 0F92h ;# ">
+"1856
+[; <" TRISB equ 0F93h ;# ">
+"1861
+[; <" DDRB equ 0F93h ;# ">
+"2077
+[; <" TRISC equ 0F94h ;# ">
+"2082
+[; <" DDRC equ 0F94h ;# ">
+"2298
+[; <" TRISD equ 0F95h ;# ">
+"2303
+[; <" DDRD equ 0F95h ;# ">
+"2519
+[; <" TRISE equ 0F96h ;# ">
+"2524
+[; <" DDRE equ 0F96h ;# ">
+"2682
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"2746
+[; <" PIE1 equ 0F9Dh ;# ">
+"2825
+[; <" PIR1 equ 0F9Eh ;# ">
+"2904
+[; <" IPR1 equ 0F9Fh ;# ">
+"2983
+[; <" PIE2 equ 0FA0h ;# ">
+"3048
+[; <" PIR2 equ 0FA1h ;# ">
+"3113
+[; <" IPR2 equ 0FA2h ;# ">
+"3178
+[; <" EECON1 equ 0FA6h ;# ">
+"3243
+[; <" EECON2 equ 0FA7h ;# ">
+"3249
+[; <" EEDATA equ 0FA8h ;# ">
+"3255
+[; <" EEADR equ 0FA9h ;# ">
+"3261
+[; <" EEADRH equ 0FAAh ;# ">
+"3267
+[; <" RCSTA equ 0FABh ;# ">
+"3272
+[; <" RCSTA1 equ 0FABh ;# ">
+"3476
+[; <" TXSTA equ 0FACh ;# ">
+"3481
+[; <" TXSTA1 equ 0FACh ;# ">
+"3773
+[; <" TXREG equ 0FADh ;# ">
+"3778
+[; <" TXREG1 equ 0FADh ;# ">
+"3784
+[; <" RCREG equ 0FAEh ;# ">
+"3789
+[; <" RCREG1 equ 0FAEh ;# ">
+"3795
+[; <" SPBRG equ 0FAFh ;# ">
+"3800
+[; <" SPBRG1 equ 0FAFh ;# ">
+"3806
+[; <" SPBRGH equ 0FB0h ;# ">
+"3812
+[; <" T3CON equ 0FB1h ;# ">
+"3925
+[; <" TMR3 equ 0FB2h ;# ">
+"3931
+[; <" TMR3L equ 0FB2h ;# ">
+"3937
+[; <" TMR3H equ 0FB3h ;# ">
+"3943
+[; <" CMCON equ 0FB4h ;# ">
+"4038
+[; <" CVRCON equ 0FB5h ;# ">
+"4116
+[; <" ECCP1AS equ 0FB6h ;# ">
+"4197
+[; <" PWM1CON equ 0FB7h ;# ">
+"4266
+[; <" BAUDCON equ 0FB8h ;# ">
+"4271
+[; <" BAUDCTL equ 0FB8h ;# ">
+"4437
+[; <" CCP2CON equ 0FBAh ;# ">
+"4515
+[; <" CCPR2 equ 0FBBh ;# ">
+"4521
+[; <" CCPR2L equ 0FBBh ;# ">
+"4527
+[; <" CCPR2H equ 0FBCh ;# ">
+"4533
+[; <" CCP1CON equ 0FBDh ;# ">
+"4629
+[; <" CCPR1 equ 0FBEh ;# ">
+"4635
+[; <" CCPR1L equ 0FBEh ;# ">
+"4641
+[; <" CCPR1H equ 0FBFh ;# ">
+"4647
+[; <" ADCON2 equ 0FC0h ;# ">
+"4717
+[; <" ADCON1 equ 0FC1h ;# ">
+"4807
+[; <" ADCON0 equ 0FC2h ;# ">
+"4929
+[; <" ADRES equ 0FC3h ;# ">
+"4935
+[; <" ADRESL equ 0FC3h ;# ">
+"4941
+[; <" ADRESH equ 0FC4h ;# ">
+"4947
+[; <" SSPCON2 equ 0FC5h ;# ">
+"5008
+[; <" SSPCON1 equ 0FC6h ;# ">
+"5077
+[; <" SSPSTAT equ 0FC7h ;# ">
+"5316
+[; <" SSPADD equ 0FC8h ;# ">
+"5322
+[; <" SSPBUF equ 0FC9h ;# ">
+"5328
+[; <" T2CON equ 0FCAh ;# ">
+"5398
+[; <" PR2 equ 0FCBh ;# ">
+"5403
+[; <" MEMCON equ 0FCBh ;# ">
+"5507
+[; <" TMR2 equ 0FCCh ;# ">
+"5513
+[; <" T1CON equ 0FCDh ;# ">
+"5617
+[; <" TMR1 equ 0FCEh ;# ">
+"5623
+[; <" TMR1L equ 0FCEh ;# ">
+"5629
+[; <" TMR1H equ 0FCFh ;# ">
+"5635
+[; <" RCON equ 0FD0h ;# ">
+"5767
+[; <" WDTCON equ 0FD1h ;# ">
+"5794
+[; <" HLVDCON equ 0FD2h ;# ">
+"5799
+[; <" LVDCON equ 0FD2h ;# ">
+"6063
+[; <" OSCCON equ 0FD3h ;# ">
+"6139
+[; <" T0CON equ 0FD5h ;# ">
+"6215
+[; <" TMR0 equ 0FD6h ;# ">
+"6221
+[; <" TMR0L equ 0FD6h ;# ">
+"6227
+[; <" TMR0H equ 0FD7h ;# ">
+"6233
+[; <" STATUS equ 0FD8h ;# ">
+"6311
+[; <" FSR2 equ 0FD9h ;# ">
+"6317
+[; <" FSR2L equ 0FD9h ;# ">
+"6323
+[; <" FSR2H equ 0FDAh ;# ">
+"6329
+[; <" PLUSW2 equ 0FDBh ;# ">
+"6335
+[; <" PREINC2 equ 0FDCh ;# ">
+"6341
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"6347
+[; <" POSTINC2 equ 0FDEh ;# ">
+"6353
+[; <" INDF2 equ 0FDFh ;# ">
+"6359
+[; <" BSR equ 0FE0h ;# ">
+"6365
+[; <" FSR1 equ 0FE1h ;# ">
+"6371
+[; <" FSR1L equ 0FE1h ;# ">
+"6377
+[; <" FSR1H equ 0FE2h ;# ">
+"6383
+[; <" PLUSW1 equ 0FE3h ;# ">
+"6389
+[; <" PREINC1 equ 0FE4h ;# ">
+"6395
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"6401
+[; <" POSTINC1 equ 0FE6h ;# ">
+"6407
+[; <" INDF1 equ 0FE7h ;# ">
+"6413
+[; <" WREG equ 0FE8h ;# ">
+"6424
+[; <" FSR0 equ 0FE9h ;# ">
+"6430
+[; <" FSR0L equ 0FE9h ;# ">
+"6436
+[; <" FSR0H equ 0FEAh ;# ">
+"6442
+[; <" PLUSW0 equ 0FEBh ;# ">
+"6448
+[; <" PREINC0 equ 0FECh ;# ">
+"6454
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"6460
+[; <" POSTINC0 equ 0FEEh ;# ">
+"6466
+[; <" INDF0 equ 0FEFh ;# ">
+"6472
+[; <" INTCON3 equ 0FF0h ;# ">
+"6563
+[; <" INTCON2 equ 0FF1h ;# ">
+"6632
+[; <" INTCON equ 0FF2h ;# ">
+"6768
+[; <" PROD equ 0FF3h ;# ">
+"6774
+[; <" PRODL equ 0FF3h ;# ">
+"6780
+[; <" PRODH equ 0FF4h ;# ">
+"6786
+[; <" TABLAT equ 0FF5h ;# ">
+"6794
+[; <" TBLPTR equ 0FF6h ;# ">
+"6800
+[; <" TBLPTRL equ 0FF6h ;# ">
+"6806
+[; <" TBLPTRH equ 0FF7h ;# ">
+"6812
+[; <" TBLPTRU equ 0FF8h ;# ">
+"6820
+[; <" PCLAT equ 0FF9h ;# ">
+"6827
+[; <" PC equ 0FF9h ;# ">
+"6833
+[; <" PCL equ 0FF9h ;# ">
+"6839
+[; <" PCLATH equ 0FFAh ;# ">
+"6845
+[; <" PCLATU equ 0FFBh ;# ">
+"6851
+[; <" STKPTR equ 0FFCh ;# ">
+"6956
+[; <" TOS equ 0FFDh ;# ">
+"6962
+[; <" TOSL equ 0FFDh ;# ">
+"6968
+[; <" TOSH equ 0FFEh ;# ">
+"6974
+[; <" TOSU equ 0FFFh ;# ">
+"21 Setup_Alarm_Time.c
+[v _Select_Alarm_Field `uc ~T0 @X0 1 e ]
+"22
+[v _In_Alarm_Time_Setup `uc ~T0 @X0 1 e ]
+"24
+[v _Do_Setup_Alarm_Time `(v ~T0 @X0 1 ef ]
+"25
+{
+[e :U _Do_Setup_Alarm_Time ]
+[f ]
+"26
+[e = _Select_Alarm_Field -> -> 0 `i `uc ]
+"27
+[e = _In_Alarm_Time_Setup -> -> 1 `i `uc ]
+"28
+[e ( _DS3231_Read_Alarm_Time ..  ]
+"29
+[e = _alarm_second ( _bcd_2_dec (1 _alarm_second ]
+"30
+[e = _alarm_minute ( _bcd_2_dec (1 _alarm_minute ]
+"31
+[e = _alarm_hour ( _bcd_2_dec (1 _alarm_hour ]
+"32
+[e = _setup_alarm_second _alarm_second ]
+"33
+[e = _setup_alarm_minute _alarm_minute ]
+"34
+[e = _setup_alarm_hour _alarm_hour ]
+"35
+[e ( _Initialize_Setup_Alarm_Time_Screen ..  ]
+"36
+[e ( _Update_Setup_Alarm_Time_Screen ..  ]
+"37
+[e $U 397  ]
+[e :U 398 ]
+"38
+{
+"39
+[e $ ! == -> ( _check_for_button_input ..  `i -> 1 `i 400  ]
+"40
+{
+"41
+[e $ ! && >= -> _found `i -> 3 `i <= -> _found `i -> 8 `i 401  ]
+"42
+{
+"43
+[e ( _Do_Beep_Good ..  ]
+"44
+[e $ ! == -> _found `i -> 3 `i 402  ]
+[e ( _Go_Prev_Alarm_Field ..  ]
+[e :U 402 ]
+"45
+[e $ ! == -> _found `i -> 4 `i 403  ]
+[e ( _Go_Next_Alarm_Field ..  ]
+[e :U 403 ]
+"46
+[e $ ! == -> _found `i -> 5 `i 404  ]
+[e ( _Do_Save_New_Alarm_Time ..  ]
+[e :U 404 ]
+"47
+[e $ ! == -> _found `i -> 6 `i 405  ]
+[e ( _Decrease_Alarm_Time ..  ]
+[e :U 405 ]
+"48
+[e $ ! == -> _found `i -> 7 `i 406  ]
+[e ( _Increase_Alarm_Time ..  ]
+[e :U 406 ]
+"49
+[e $ ! == -> _found `i -> 8 `i 407  ]
+[e ( _Exit_Setup_Alarm_Time ..  ]
+[e :U 407 ]
+"51
+[e = _found -> -> 255 `i `uc ]
+"52
+}
+[e $U 408  ]
+"53
+[e :U 401 ]
+"54
+{
+"55
+[e ( _Do_Beep_Bad ..  ]
+"56
+}
+[e :U 408 ]
+"57
+}
+[e :U 400 ]
+"58
+}
+[e :U 397 ]
+"37
+[e $ == -> _In_Alarm_Time_Setup `i -> 1 `i 398  ]
+[e :U 399 ]
+"59
+[e :UE 396 ]
+}
+"61
+[v _Increase_Alarm_Time `(v ~T0 @X0 1 ef ]
+"62
+{
+[e :U _Increase_Alarm_Time ]
+[f ]
+"63
+[e $U 411  ]
+"64
+{
+"65
+[e :U 412 ]
+"66
+[e ++ _setup_alarm_hour -> -> 1 `i `uc ]
+"67
+[e $ ! == -> _setup_alarm_hour `i -> 24 `i 413  ]
+[e = _setup_alarm_hour -> -> 0 `i `uc ]
+[e :U 413 ]
+"68
+[e $U 410  ]
+"70
+[e :U 414 ]
+"72
+[e ++ _setup_alarm_minute -> -> 1 `i `uc ]
+"73
+[e $ ! == -> _setup_alarm_minute `i -> 60 `i 415  ]
+[e = _setup_alarm_minute -> -> 0 `i `uc ]
+[e :U 415 ]
+"74
+[e $U 410  ]
+"75
+[e :U 416 ]
+"77
+[e ++ _setup_alarm_second -> -> 1 `i `uc ]
+"78
+[e $ ! == -> _setup_alarm_second `i -> 60 `i 417  ]
+[e = _setup_alarm_second -> -> 0 `i `uc ]
+[e :U 417 ]
+"79
+[e $U 410  ]
+"82
+[e :U 418 ]
+"83
+[e $U 410  ]
+"84
+}
+[e $U 410  ]
+"63
+[e :U 411 ]
+[e [\ _Select_Alarm_Field , $ -> -> 0 `i `uc 412
+ , $ -> -> 1 `i `uc 414
+ , $ -> -> 2 `i `uc 416
+ 418 ]
+"84
+[e :U 410 ]
+"85
+[e ( _Update_Setup_Alarm_Time_Screen ..  ]
+"87
+[e :UE 409 ]
+}
+"89
+[v _Decrease_Alarm_Time `(v ~T0 @X0 1 ef ]
+"90
+{
+[e :U _Decrease_Alarm_Time ]
+[f ]
+"91
+[e $U 421  ]
+"92
+{
+"93
+[e :U 422 ]
+"94
+[e $ ! == -> _setup_alarm_hour `i -> 0 `i 423  ]
+[e = _setup_alarm_hour -> -> 23 `i `uc ]
+[e $U 424  ]
+"95
+[e :U 423 ]
+[e =- _setup_alarm_hour -> -> 1 `i `uc ]
+[e :U 424 ]
+"96
+[e $U 420  ]
+"98
+[e :U 425 ]
+"99
+[e $ ! == -> _setup_alarm_minute `i -> 0 `i 426  ]
+[e = _setup_alarm_minute -> -> 59 `i `uc ]
+[e $U 427  ]
+"100
+[e :U 426 ]
+[e =- _setup_alarm_minute -> -> 1 `i `uc ]
+[e :U 427 ]
+"101
+[e $U 420  ]
+"104
+[e :U 428 ]
+"106
+[e $ ! == -> _setup_alarm_second `i -> 0 `i 429  ]
+[e = _setup_alarm_second -> -> 59 `i `uc ]
+[e $U 430  ]
+"107
+[e :U 429 ]
+[e =- _setup_alarm_second -> -> 1 `i `uc ]
+[e :U 430 ]
+"108
+[e $U 420  ]
+"110
+[e :U 431 ]
+"111
+[e $U 420  ]
+"112
+}
+[e $U 420  ]
+"91
+[e :U 421 ]
+[e [\ _Select_Alarm_Field , $ -> -> 0 `i `uc 422
+ , $ -> -> 1 `i `uc 425
+ , $ -> -> 2 `i `uc 428
+ 431 ]
+"112
+[e :U 420 ]
+"113
+[e ( _Update_Setup_Alarm_Time_Screen ..  ]
+"115
+[e :UE 419 ]
+}
+"117
+[v _Go_Next_Alarm_Field `(v ~T0 @X0 1 ef ]
+"118
+{
+[e :U _Go_Next_Alarm_Field ]
+[f ]
+"120
+[e ++ _Select_Alarm_Field -> -> 1 `i `uc ]
+"121
+[e $ ! == -> _Select_Alarm_Field `i -> 3 `i 433  ]
+[e = _Select_Alarm_Field -> -> 0 `i `uc ]
+[e :U 433 ]
+"122
+[e ( _Update_Setup_Screen_Cursor_Forward (1 _Select_Alarm_Field ]
+"124
+[e :UE 432 ]
+}
+"126
+[v _Go_Prev_Alarm_Field `(v ~T0 @X0 1 ef ]
+"127
+{
+[e :U _Go_Prev_Alarm_Field ]
+[f ]
+"128
+[e $ ! == -> _Select_Alarm_Field `i -> 0 `i 435  ]
+[e = _Select_Alarm_Field -> -> 2 `i `uc ]
+[e $U 436  ]
+"129
+[e :U 435 ]
+[e -- _Select_Alarm_Field -> -> 1 `i `uc ]
+[e :U 436 ]
+"130
+[e ( _Update_Setup_Screen_Cursor_Backward (1 _Select_Alarm_Field ]
+"131
+[e :UE 434 ]
+}
+"133
+[v _Exit_Setup_Alarm_Time `(v ~T0 @X0 1 ef ]
+"134
+{
+[e :U _Exit_Setup_Alarm_Time ]
+[f ]
+"135
+[e ( _DS3231_Read_Time ..  ]
+"136
+[e ( _Initialize_Screen ..  ]
+"137
+[e = _In_Alarm_Time_Setup -> -> 0 `i `uc ]
+"138
+[e :UE 437 ]
+}
+"140
+[v _Do_Save_New_Alarm_Time `(v ~T0 @X0 1 ef ]
+"141
+{
+[e :U _Do_Save_New_Alarm_Time ]
+[f ]
+"142
+[e ( _DS3231_Write_Alarm_Time ..  ]
+"143
+[e ( _DS3231_Read_Alarm_Time ..  ]
+"144
+[e ( _DS3231_Read_Time ..  ]
+"145
+[e ( _Initialize_Screen ..  ]
+"146
+[e = _In_Alarm_Time_Setup -> -> 0 `i `uc ]
+"147
+[e :UE 438 ]
+}
+"149
+[v _Initialize_Setup_Alarm_Time_Screen `(v ~T0 @X0 1 ef ]
+"150
+{
+[e :U _Initialize_Setup_Alarm_Time_Screen ]
+[f ]
+"151
+[e ( _fillScreen (1 -> -> 0 `i `ui ]
+"153
+[e ( _strcpy (2 , _txt :s 1C ]
+"154
+[e ( _drawtext (4 , , , , , -> -> 1 `i `uc -> -> 1 `i `uc _txt -> 65535 `ui -> -> 0 `i `ui -> -> 1 `i `uc ]
+"157
+[e ( _strcpy (2 , _txt :s 2C ]
+"158
+[e ( _drawtext (4 , , , , , -> + -> 1 `i -> 5 `i `uc -> + -> 1 `i -> 20 `i `uc _txt -> 63519 `ui -> -> 0 `i `ui -> -> 2 `i `uc ]
+"160
+[e ( _strcpy (2 , _txt :s 3C ]
+"161
+[e ( _drawtext (4 , , , , , -> -> 50 `i `uc -> -> 40 `i `uc _txt -> -> 31 `i `ui -> -> 0 `i `ui -> -> 1 `i `uc ]
+"162
+[e ( _fillRect (4 , , , , -> - -> 15 `i -> 1 `i `uc -> + -> 52 `i -> 16 `i `uc -> -> 25 `i `uc -> -> 2 `i `uc -> -> 2047 `i `ui ]
+"163
+[e :UE 439 ]
+}
+"165
+[v _Update_Setup_Alarm_Time_Screen `(v ~T0 @X0 1 ef ]
+"166
+{
+[e :U _Update_Setup_Alarm_Time_Screen ]
+[f ]
+"167
+[e ( _printf , , , (. :s 4C -> _setup_alarm_hour `i -> _setup_alarm_minute `i -> _setup_alarm_second `i ]
+"168
+[e = *U + &U _setup_alarm_time * -> -> -> 0 `i `ui `ux -> -> # *U &U _setup_alarm_time `ui `ux -> + -> / -> _setup_alarm_hour `i -> 10 `i `ui -> 48 `ui `uc ]
+"169
+[e = *U + &U _setup_alarm_time * -> -> -> 1 `i `ui `ux -> -> # *U &U _setup_alarm_time `ui `ux -> + -> % -> _setup_alarm_hour `i -> 10 `i `ui -> 48 `ui `uc ]
+"170
+[e = *U + &U _setup_alarm_time * -> -> -> 3 `i `ui `ux -> -> # *U &U _setup_alarm_time `ui `ux -> + -> / -> _setup_alarm_minute `i -> 10 `i `ui -> 48 `ui `uc ]
+"171
+[e = *U + &U _setup_alarm_time * -> -> -> 4 `i `ui `ux -> -> # *U &U _setup_alarm_time `ui `ux -> + -> % -> _setup_alarm_minute `i -> 10 `i `ui -> 48 `ui `uc ]
+"172
+[e = *U + &U _setup_alarm_time * -> -> -> 6 `i `ui `ux -> -> # *U &U _setup_alarm_time `ui `ux -> + -> / -> _setup_alarm_second `i -> 10 `i `ui -> 48 `ui `uc ]
+"173
+[e = *U + &U _setup_alarm_time * -> -> -> 7 `i `ui `ux -> -> # *U &U _setup_alarm_time `ui `ux -> + -> % -> _setup_alarm_second `i -> 10 `i `ui -> 48 `ui `uc ]
+"174
+[e ( _drawtext (4 , , , , , -> -> 15 `i `uc -> -> 52 `i `uc &U _setup_alarm_time -> -> 2047 `i `ui -> -> 0 `i `ui -> -> 2 `i `uc ]
+"175
+[e :UE 440 ]
+}
+[p f _printf 12582912 ]
+[a 2C 65 108 114 109 32 83 101 116 117 112 0 ]
+[a 1C 69 67 69 51 51 48 49 76 32 83 112 50 49 32 70 105 110 97 108 0 ]
+[a 3C 84 105 109 101 0 ]
+[a 4C 37 120 58 37 120 58 37 120 13 10 0 ]
